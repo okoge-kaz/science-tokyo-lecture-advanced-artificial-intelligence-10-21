@@ -3,11 +3,11 @@ import jssf.math.TCMatrix;
 
 
 /** 
- * ���ْl�����N���X�D
- * Jama.SingularValueDecomposition�����ɍ쐬�D
- * TCMatrix�p�ɉ��ρD
- * �Ĕz�z�ɂ̓��C�Z���X���ӁD
- * 20100822 ��肠�����쐬�D�R�[�h�����ꂢ�ɂ���̂͌�D
+ * 特異値分解クラス．
+ * Jama.SingularValueDecompositionを元に作成．
+ * TCMatrix用に改変．
+ * 再配布にはライセンス注意．
+ * 20100822 取りあえず作成．コードをきれいにするのは後．
  * @author uemura
  * 
  * 

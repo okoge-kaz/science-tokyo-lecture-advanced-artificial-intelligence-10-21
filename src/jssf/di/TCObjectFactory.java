@@ -48,9 +48,9 @@ public class TCObjectFactory {
 	}
 	
 	/**
-	 * ƒIƒuƒWƒFƒNƒgƒtƒ@ƒNƒgƒŠ‚ª¶¬‚µ‚½ƒIƒuƒWƒFƒNƒg‚É‘Î‰‚·‚éƒL[‚ğ•Ô‚·D
-	 * @param o ƒIƒuƒWƒFƒNƒg
-	 * @return ƒL[Do‚ªC‚±‚Ìƒtƒ@ƒNƒgƒŠ‚É‚æ‚Á‚Äì¬‚³‚ê‚½‚à‚Ì‚Å‚È‚¯‚ê‚ÎCnull‚ğ•Ô‚·B
+	 * ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãƒ•ã‚¡ã‚¯ãƒˆãƒªãŒç”Ÿæˆã—ãŸã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«å¯¾å¿œã™ã‚‹ã‚­ãƒ¼ã‚’è¿”ã™ï¼
+	 * @param o ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
+	 * @return ã‚­ãƒ¼ï¼oãŒï¼Œã“ã®ãƒ•ã‚¡ã‚¯ãƒˆãƒªã«ã‚ˆã£ã¦ä½œæˆã•ã‚ŒãŸã‚‚ã®ã§ãªã‘ã‚Œã°ï¼Œnullã‚’è¿”ã™ã€‚
 	 */
 	public String getKey(Object o) {
 		return fKeyPool.get(o);
@@ -177,12 +177,12 @@ public class TCObjectFactory {
 		Set<String> propertyset = new HashSet<String>();
 		Set<String> allkeys = props.stringPropertyNames();
 		int begin = absKey.length() + 1;
-		for (String key : allkeys) {	//ƒvƒƒpƒeƒB‚Ì’†‚©‚çŒ»İ‚ÌƒIƒuƒWƒFƒNƒg—p‚ÌƒvƒƒpƒeƒB‚ğŒŸõ‚·‚é
+		for (String key : allkeys) {	//ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã®ä¸­ã‹ã‚‰ç¾åœ¨ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆç”¨ã®ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’æ¤œç´¢ã™ã‚‹
 			if (key.startsWith(absKey) && !key.equals(absKey) && key.charAt(absKey.length()) == '.') {
 				int end = key.indexOf('.', begin);
-				if (end == -1) {	//'.'‚ª“oê‚µ‚È‚¯‚ê‚ÎCƒx[ƒXƒL[‚©‚ç––”ö‚Ü‚Å‚ªƒvƒƒpƒeƒBEƒL[
+				if (end == -1) {	//'.'ãŒç™»å ´ã—ãªã‘ã‚Œã°ï¼Œãƒ™ãƒ¼ã‚¹ã‚­ãƒ¼ã‹ã‚‰æœ«å°¾ã¾ã§ãŒãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ãƒ»ã‚­ãƒ¼
 					propertyset.add(key.substring(begin));
-				} else {	//'.'‚ª“oê‚·‚é‚È‚ç‚ÎCƒx[ƒXƒL[‚©‚ç'.'‚Ü‚Å‚ªƒvƒƒpƒeƒBEƒL[
+				} else {	//'.'ãŒç™»å ´ã™ã‚‹ãªã‚‰ã°ï¼Œãƒ™ãƒ¼ã‚¹ã‚­ãƒ¼ã‹ã‚‰'.'ã¾ã§ãŒãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ãƒ»ã‚­ãƒ¼
 					propertyset.add(key.substring(begin, end));
 				}
 			}
@@ -305,23 +305,23 @@ class TCConstructor {
 	}
 
 	/**
-	 * ƒvƒƒpƒeƒBƒtƒ@ƒCƒ‹‚Éw’è‚³‚ê‚½ƒL[‚ª‚·‚×‚ÄŒ©‚Â‚©‚èC‚©‚ÂC
-	 * ƒvƒƒpƒeƒBƒtƒ@ƒCƒ‹‚Éw’è‚³‚ê‚È‚©‚Á‚½ƒL[‚Ì‚·‚×‚Ä‚ÉƒfƒtƒHƒ‹ƒg’l‚ªİ’è‚³‚ê‚Ä‚¢‚éê‡‚Ì‚İtrue
-	 * ‚»‚¤‚Å‚È‚¯‚ê‚Îfalse‚ğ•Ô‚·D
+	 * ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ãƒ•ã‚¡ã‚¤ãƒ«ã«æŒ‡å®šã•ã‚ŒãŸã‚­ãƒ¼ãŒã™ã¹ã¦è¦‹ã¤ã‹ã‚Šï¼Œã‹ã¤ï¼Œ
+	 * ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ãƒ•ã‚¡ã‚¤ãƒ«ã«æŒ‡å®šã•ã‚Œãªã‹ã£ãŸã‚­ãƒ¼ã®ã™ã¹ã¦ã«ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆå€¤ãŒè¨­å®šã•ã‚Œã¦ã„ã‚‹å ´åˆã®ã¿true
+	 * ãã†ã§ãªã‘ã‚Œã°falseã‚’è¿”ã™ï¼
 	 *
 	 * @param propertyKeys
-	 * @return ƒpƒ‰ƒ[ƒ^‚ªƒ}ƒbƒ`‚µ‚½‚©
+	 * @return ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ãŒãƒãƒƒãƒã—ãŸã‹
 	 * @since 2 hmkz
 	 */
 	public boolean isParameterMatched(Set<String> propertyKeys) {
 		final int n = getNoOfParameters();
 		for (TCParameter param : fParams) {
 			if (param.getKey() == null) {
-				//ACParam‚ª•t‰Á‚³‚ê‚Ä‚¢‚È‚¢ˆø”‚ª‘¶İ‚µ‚½‚çfalse
+				//ACParamãŒä»˜åŠ ã•ã‚Œã¦ã„ãªã„å¼•æ•°ãŒå­˜åœ¨ã—ãŸã‚‰false
 				return false;
 			}
 			if (!propertyKeys.contains(param.getKey()) && param.getDefaultValue().isEmpty()) {
-				//ƒvƒƒpƒeƒBƒtƒ@ƒCƒ‹‚Éw’è‚³‚ê‚È‚©‚Á‚½ƒL[‚É‚ÍƒfƒtƒHƒ‹ƒg’l‚ªİ’è‚³‚ê‚Ä‚¢‚È‚¯‚ê‚Î‚È‚ç‚È‚¢D
+				//ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ãƒ•ã‚¡ã‚¤ãƒ«ã«æŒ‡å®šã•ã‚Œãªã‹ã£ãŸã‚­ãƒ¼ã«ã¯ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆå€¤ãŒè¨­å®šã•ã‚Œã¦ã„ãªã‘ã‚Œã°ãªã‚‰ãªã„ï¼
 				return false;
 			}
 		}
@@ -333,7 +333,7 @@ class TCConstructor {
 					break;
 				}
 			}
-			if (!isParameterFound) {//ƒvƒƒpƒeƒBƒtƒ@ƒCƒ‹‚Éw’è‚³‚ê‚½ƒL[‚Í•K‚¸‘¶İ‚µ‚È‚¯‚ê‚Î‚¢‚¯‚È‚¢D
+			if (!isParameterFound) {//ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ãƒ•ã‚¡ã‚¤ãƒ«ã«æŒ‡å®šã•ã‚ŒãŸã‚­ãƒ¼ã¯å¿…ãšå­˜åœ¨ã—ãªã‘ã‚Œã°ã„ã‘ãªã„ï¼
 				return false;
 			}
 		}

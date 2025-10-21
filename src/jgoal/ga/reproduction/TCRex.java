@@ -8,7 +8,7 @@ import jssf.math.TCMatrix;
 import jssf.random.ICRandom;
 
 /**
- * Œğ³Rex
+ * äº¤å‰Rex
  * @author uemura, isao
  *
  * @param <X>
@@ -17,7 +17,7 @@ public class TCRex<X extends ICRealSolution> implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
-	/** —˜—p‚·‚éŠm—¦•ª•z‚ÌŒ`ó */
+	/** åˆ©ç”¨ã™ã‚‹ç¢ºç‡åˆ†å¸ƒã®å½¢çŠ¶ */
 	public enum ProbabilityDistribution {
 		NORMAL,
 		UNIFORM,
@@ -25,10 +25,10 @@ public class TCRex<X extends ICRealSolution> implements Serializable {
 	
 	private ProbabilityDistribution fProbabilityDistribution;
 	
-	/** —˜—p‚·‚éŠm—¦•ª•z‚ÌŠg’£—¦D“Œv—Êˆâ“`‚ğ–‚½‚·‚æ‚¤‚Éİ’è‚³‚ê‚éD */
+	/** åˆ©ç”¨ã™ã‚‹ç¢ºç‡åˆ†å¸ƒã®æ‹¡å¼µç‡ï¼çµ±è¨ˆé‡éºä¼ã‚’æº€ãŸã™ã‚ˆã†ã«è¨­å®šã•ã‚Œã‚‹ï¼ */
 	private double fExpansionRatio;
 	
-	/** eŒÂ‘Ì‚ÌdSƒxƒNƒgƒ‹ */
+	/** è¦ªå€‹ä½“ã®é‡å¿ƒãƒ™ã‚¯ãƒˆãƒ« */
 	private TCMatrix fXg;
 	
 	private TCMatrix fWork;
@@ -38,11 +38,11 @@ public class TCRex<X extends ICRealSolution> implements Serializable {
 	private ICRandom fRandom;
 	
 	/**
-	 * ƒRƒ“ƒXƒgƒ‰ƒNƒ^
-	 * @param dim –â‘è‚ÌŸŒ³”
-	 * @param noOfParents eŒÂ‘Ì”
-	 * @param pd —˜—p‚·‚éŠm—¦•ª•zDNORMAL‚à‚µ‚­‚ÍUNIFORM‚ğ‘I‘ğD
-	 * @param random —”¶¬Ší
+	 * ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
+	 * @param dim å•é¡Œã®æ¬¡å…ƒæ•°
+	 * @param noOfParents è¦ªå€‹ä½“æ•°
+	 * @param pd åˆ©ç”¨ã™ã‚‹ç¢ºç‡åˆ†å¸ƒï¼NORMALã‚‚ã—ãã¯UNIFORMã‚’é¸æŠï¼
+	 * @param random ä¹±æ•°ç”Ÿæˆå™¨
 	 */
 	public TCRex(
 			@ACParam(key="ProblemDimension") int dim,
@@ -66,11 +66,11 @@ public class TCRex<X extends ICRealSolution> implements Serializable {
 	}
 	
 	/**
-	 * eŒÂ‘Ì”‚ğ(n+1)‚Å‰Šú‰»D
+	 * è¦ªå€‹ä½“æ•°ã‚’(n+1)ã§åˆæœŸåŒ–ï¼
 	 * 
-	 * @param dim –â‘è‚ÌŸŒ³”
-	 * @param pd —˜—p‚·‚éŠm—¦•ª•zDNORMAL‚à‚µ‚­‚ÍUNIFORM‚ğ‘I‘ğD
-	 * @param random —”¶¬Ší
+	 * @param dim å•é¡Œã®æ¬¡å…ƒæ•°
+	 * @param pd åˆ©ç”¨ã™ã‚‹ç¢ºç‡åˆ†å¸ƒï¼NORMALã‚‚ã—ãã¯UNIFORMã‚’é¸æŠï¼
+	 * @param random ä¹±æ•°ç”Ÿæˆå™¨
 	 */
 	public TCRex(
 			@ACParam(key="ProblemDimension") int dim,
@@ -91,7 +91,7 @@ public class TCRex<X extends ICRealSolution> implements Serializable {
 		kids.resize(noOfKids);
 		for(X kid : kids) {
 			TCMatrix kVec = kid.getVector();
-			kVec.copyFrom(fXg); //dSƒxƒNƒgƒ‹‚ğƒRƒs[
+			kVec.copyFrom(fXg); //é‡å¿ƒãƒ™ã‚¯ãƒˆãƒ«ã‚’ã‚³ãƒ”ãƒ¼
 			for(X parent : parents) {
 				fWork.copyFrom(parent.getVector());
 				fWork.sub(fXg);
@@ -111,7 +111,7 @@ public class TCRex<X extends ICRealSolution> implements Serializable {
 	}
 	
 	/**
-	 * eŒÂ‘Ì‚ÌdS‚ÌŒvZD
+	 * è¦ªå€‹ä½“ã®é‡å¿ƒã®è¨ˆç®—ï¼
 	 * @param parents
 	 */
 	private void calcXg(TCSolutionSet<X> parents) {

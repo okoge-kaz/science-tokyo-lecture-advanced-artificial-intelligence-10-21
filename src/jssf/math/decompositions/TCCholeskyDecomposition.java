@@ -2,11 +2,11 @@ package jssf.math.decompositions;
 import jssf.math.TCMatrix;
 
 /** 
- * �R���X�L�[�����N���X�D
- * Jama.CholeskyDecomposition�N���X�����ɍ쐬�D
- * TCMatrix�p�ɉ��ρD
- * �Ĕz�z�ɂ̓��C�Z���X���ӁD
- * 20100822 ��肠�����쐬�D�R�[�h�����ꂢ�ɂ���̂͌�D
+ * コレスキー分解クラス．
+ * Jama.CholeskyDecompositionクラスを元に作成．
+ * TCMatrix用に改変．
+ * 再配布にはライセンス注意．
+ * 20100822 取りあえず作成．コードをきれいにするのは後．
  * @author uemura
  * 
  * 

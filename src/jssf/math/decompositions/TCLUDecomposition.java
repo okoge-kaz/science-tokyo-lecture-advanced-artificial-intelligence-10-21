@@ -2,11 +2,11 @@ package jssf.math.decompositions;
 import jssf.math.TCMatrix;
 
 /** 
- * LU•ª‰ğƒNƒ‰ƒXD
- * Jama.LUDecomposition‚ğŒ³‚Éì¬D
- * TCMatrix—p‚É‰ü•ÏD
- * Ä”z•z‚É‚Íƒ‰ƒCƒZƒ“ƒX’ˆÓD
- * 20100822 æ‚è‚ ‚¦‚¸ì¬DƒR[ƒh‚ğ‚«‚ê‚¢‚É‚·‚é‚Ì‚ÍŒãD
+ * LUåˆ†è§£ã‚¯ãƒ©ã‚¹ï¼
+ * Jama.LUDecompositionã‚’å…ƒã«ä½œæˆï¼
+ * TCMatrixç”¨ã«æ”¹å¤‰ï¼
+ * å†é…å¸ƒã«ã¯ãƒ©ã‚¤ã‚»ãƒ³ã‚¹æ³¨æ„ï¼
+ * 20100822 å–ã‚Šã‚ãˆãšä½œæˆï¼ã‚³ãƒ¼ãƒ‰ã‚’ãã‚Œã„ã«ã™ã‚‹ã®ã¯å¾Œï¼
  * @author uemura
  * 
  * LU Decomposition.
@@ -314,7 +314,7 @@ public class TCLUDecomposition implements java.io.Serializable {
 		// Copy right hand side with pivoting
 		int nx = B.getColumnDimension();
 //		Matrix Xmat = B.getMatrix(piv,0,nx-1);
-		//ˆÈ‰ºB‚Ì•”•ªs—ñ‚ğì¬‚·‚é. uemura : •”•ªs—ñæ“¾ƒƒ\ƒbƒhíœ‚Ì‚½‚ß‘‚«’¼‚µ
+		//ä»¥ä¸‹Bã®éƒ¨åˆ†è¡Œåˆ—ã‚’ä½œæˆã™ã‚‹. uemura : éƒ¨åˆ†è¡Œåˆ—å–å¾—ãƒ¡ã‚½ãƒƒãƒ‰å‰Šé™¤ã®ãŸã‚æ›¸ãç›´ã—
 		TCMatrix Xmat = new TCMatrix(piv.length, nx);
 		for(int i=0; i<piv.length; i++) {
 			for(int j=0; j<nx; j++) {

@@ -54,7 +54,7 @@ public class TCSolutionSet<
 	}
 	
 	/**
-	 * ƒNƒ[ƒ“‘€ì
+	 * ã‚¯ãƒ­ãƒ¼ãƒ³æ“ä½œ
 	 */
 	public TCSolutionSet<X> clone() {
 		return new TCSolutionSet<X>(this);
@@ -134,8 +134,8 @@ public class TCSolutionSet<
 	}
 
 	/**
-	 * ‰ðƒtƒ@ƒNƒgƒŠ‚ð•Ô‚·D
-	 * @return ‰ðƒtƒ@ƒNƒgƒŠ
+	 * è§£ãƒ•ã‚¡ã‚¯ãƒˆãƒªã‚’è¿”ã™ï¼Ž
+	 * @return è§£ãƒ•ã‚¡ã‚¯ãƒˆãƒª
 	 */
 	public TCSolutionFactory<X> getSolutionFactory() {
 		return fFactory;

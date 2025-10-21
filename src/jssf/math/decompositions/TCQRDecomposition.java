@@ -3,11 +3,11 @@ import jssf.math.TCMatrix;
 
 
 /** 
- * QR�����N���X�D
- * Jama.QRDecomposition�����ɍ쐬�D
- * TCMatrix�p�ɉ��ρD
- * �Ĕz�z�ɂ̓��C�Z���X���ӁD
- * 20100822 ��肠�����쐬�D�R�[�h�����ꂢ�ɂ���̂͌�D
+ * QR分解クラス．
+ * Jama.QRDecompositionを元に作成．
+ * TCMatrix用に改変．
+ * 再配布にはライセンス注意．
+ * 20100822 取りあえず作成．コードをきれいにするのは後．
  * @author uemura
  * 
  * QR Decomposition.
@@ -251,7 +251,7 @@ public class TCQRDecomposition implements java.io.Serializable {
 				}
 			}
 		}
-		//�z��X�̕����z��X(0:n-1, 0:nx-1)�ōs����쐬�D
+		//配列Xの部分配列X(0:n-1, 0:nx-1)で行列を作成．
 		TCMatrix X2 = new TCMatrix(n, nx);
 		for(int i=0; i<n; i++) {
 			for(int j=0; j<nx; j++) {

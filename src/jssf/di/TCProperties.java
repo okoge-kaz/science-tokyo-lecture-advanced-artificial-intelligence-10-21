@@ -50,8 +50,8 @@ public class TCProperties extends Properties implements Serializable, Cloneable 
 	}
 	
 	/**
-	 * ƒRƒ“ƒXƒgƒ‰ƒNƒ^
-	 * @param propertiesFilename ƒvƒƒpƒeƒBƒtƒ@ƒCƒ‹
+	 * ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
+	 * @param propertiesFilename ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ãƒ•ã‚¡ã‚¤ãƒ«
 	 * @throws FileNotFoundException
 	 * @throws IOException
 	 */
@@ -60,7 +60,7 @@ public class TCProperties extends Properties implements Serializable, Cloneable 
 	}
 
 	/*
-	 * (”ñ Javadoc)
+	 * (é Javadoc)
 	 * @see java.util.Hashtable#clone()
 	 */
 	@Override
@@ -133,9 +133,9 @@ public class TCProperties extends Properties implements Serializable, Cloneable 
 	}
 
 	/**
-	 * —^‚¦‚ç‚ê‚½key‚ÌQÆ‚ğ‰ğŒˆ‚µ‚ÄC––’[‚Ìâ‘ÎƒL[‚ğ•Ô‚·
+	 * ä¸ãˆã‚‰ã‚ŒãŸkeyã®å‚ç…§ã‚’è§£æ±ºã—ã¦ï¼Œæœ«ç«¯ã®çµ¶å¯¾ã‚­ãƒ¼ã‚’è¿”ã™
 	 * @param key
-	 * @return ––’[‚Ìâ‘ÎƒL[
+	 * @return æœ«ç«¯ã®çµ¶å¯¾ã‚­ãƒ¼
 	 * @since 2 hmkz
 	 */
 	public String unifyKey(String key) {

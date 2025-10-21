@@ -31,15 +31,15 @@ public interface ICSolution extends Cloneable, Serializable {
 	}
 	
 	/**
-	 * ƒNƒ[ƒ“‚ğì¬‚·‚éD
-	 * @return ƒNƒ[ƒ“
+	 * ã‚¯ãƒ­ãƒ¼ãƒ³ã‚’ä½œæˆã™ã‚‹ï¼
+	 * @return ã‚¯ãƒ­ãƒ¼ãƒ³
 	 */
 	ICSolution clone();
 	
 	/**
-	 * ƒRƒs[‘€ì
-	 * @param src ƒRƒs[Œ³
-	 * @return ƒRƒs[Œ³
+	 * ã‚³ãƒ”ãƒ¼æ“ä½œ
+	 * @param src ã‚³ãƒ”ãƒ¼å…ƒ
+	 * @return ã‚³ãƒ”ãƒ¼å…ƒ
 	 */
 	ICSolution copyFrom(ICSolution src);
 

@@ -5,7 +5,7 @@ import jssf.random.ICRandom;
 import jssf.di.ACParam;
 
 /**
- * ƒ‹[ƒŒƒbƒg
+ * ãƒ«ãƒ¼ãƒ¬ãƒƒãƒˆ
  * @since 2
  * @author isao
  */
@@ -13,19 +13,19 @@ public class TCRoulette implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	/** ƒXƒƒbƒg‚Ì” */
+	/** ã‚¹ãƒ­ãƒƒãƒˆã®æ•° */
 	private int fNoOfSlots;
 
-	/** Œ»İ‚ÌƒXƒƒbƒg‚ÌˆÊ’u */
+	/** ç¾åœ¨ã®ã‚¹ãƒ­ãƒƒãƒˆã®ä½ç½® */
 	private int fCurrentSlotIndex;
 
-	/** ƒXƒƒbƒg */
+	/** ã‚¹ãƒ­ãƒƒãƒˆ */
 	private double[] fSlots;
 
 	private ICRandom fRandom;
 
 	/**
-	 * ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+	 * ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 	 * @param noOfSlots the number of slots in the roulette wheel
 	 * @param random a random number generator
 	 * @since 2 isao
@@ -40,7 +40,7 @@ public class TCRoulette implements Serializable {
 	}
 
 	/**
-	 * ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+	 * ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 	 * @param random a random number generator
 	 * @since 2 isao
 	 */
@@ -49,8 +49,8 @@ public class TCRoulette implements Serializable {
 	}
 
 	/**
-	 * ƒ‹[ƒŒƒbƒgsrc‚Ìƒpƒ‰ƒ[ƒ^‚ğƒRƒs[‚·‚éD
-	 * @param src ƒRƒs[Œ³‚Ìƒ‹[ƒŒƒbƒg
+	 * ãƒ«ãƒ¼ãƒ¬ãƒƒãƒˆsrcã®ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã‚’ã‚³ãƒ”ãƒ¼ã™ã‚‹ï¼
+	 * @param src ã‚³ãƒ”ãƒ¼å…ƒã®ãƒ«ãƒ¼ãƒ¬ãƒƒãƒˆ
 	 * @since 2 isao
 	 */
 	public void copyFrom(TCRoulette src) {
@@ -61,8 +61,8 @@ public class TCRoulette implements Serializable {
 	}
 
 	/**
-	 * ƒXƒƒbƒg”‚ğƒZƒbƒg‚·‚éD
-	 * @param noOfSlots ƒXƒƒbƒg”
+	 * ã‚¹ãƒ­ãƒƒãƒˆæ•°ã‚’ã‚»ãƒƒãƒˆã™ã‚‹ï¼
+	 * @param noOfSlots ã‚¹ãƒ­ãƒƒãƒˆæ•°
 	 * @since 2 isao
 	 */
 	public void setNoOfSlots(int noOfSlots) {
@@ -75,8 +75,8 @@ public class TCRoulette implements Serializable {
 	}
 
 	/**
-	 * ƒXƒƒbƒg”‚ğ•Ô‚·D
-	 * @return ƒXƒƒbƒg”
+	 * ã‚¹ãƒ­ãƒƒãƒˆæ•°ã‚’è¿”ã™ï¼
+	 * @return ã‚¹ãƒ­ãƒƒãƒˆæ•°
 	 * @since 2 isao
 	 */
 	public int getNoOfSlots() {
@@ -84,8 +84,8 @@ public class TCRoulette implements Serializable {
 	}
 
 	/**
-	 * Œ»İ‚ÌƒXƒƒbƒg‚ÌˆÊ’u‚ğƒŠƒZƒbƒg‚·‚éD<BR>
-	 * ƒJƒŒƒ“ƒgƒXƒƒbƒg‚ğ0‚É‚·‚éD
+	 * ç¾åœ¨ã®ã‚¹ãƒ­ãƒƒãƒˆã®ä½ç½®ã‚’ãƒªã‚»ãƒƒãƒˆã™ã‚‹ï¼<BR>
+	 * ã‚«ãƒ¬ãƒ³ãƒˆã‚¹ãƒ­ãƒƒãƒˆã‚’0ã«ã™ã‚‹ï¼
 	 * @since 2 isao
 	 */
 	public void resetCurrentSlotIndex() {
@@ -93,8 +93,8 @@ public class TCRoulette implements Serializable {
 	}
 
 	/**
-	 * Œ»İ‚ÌƒXƒƒbƒg‚ÌˆÊ’u‚ğ•Ô‚·D
-	 * @return Œ»İ‚ÌƒXƒƒbƒg‚ÌˆÊ’u
+	 * ç¾åœ¨ã®ã‚¹ãƒ­ãƒƒãƒˆã®ä½ç½®ã‚’è¿”ã™ï¼
+	 * @return ç¾åœ¨ã®ã‚¹ãƒ­ãƒƒãƒˆã®ä½ç½®
 	 * @since 2 isao
 	 */
 	public int getCurrentSlotIndex() {
@@ -102,8 +102,8 @@ public class TCRoulette implements Serializable {
 	}
 
 	/**
-	 * ƒXƒƒbƒg‚É’l‚ğƒZƒbƒg‚·‚éD
-	 * @param value ƒZƒbƒg‚·‚é’l
+	 * ã‚¹ãƒ­ãƒƒãƒˆã«å€¤ã‚’ã‚»ãƒƒãƒˆã™ã‚‹ï¼
+	 * @param value ã‚»ãƒƒãƒˆã™ã‚‹å€¤
 	 * @since 2 isao
 	 */
 	public void setValueToSlot(double value) {
@@ -116,9 +116,9 @@ public class TCRoulette implements Serializable {
 	}
 
 	/**
-	 * index”Ô–Ú‚ÌƒXƒƒbƒg‚Ì’l‚ğ•Ô‚·D
-	 * @param index ’l‚ğ“¾‚½‚¢ƒXƒƒbƒg‚ÌˆÊ’u
-	 * @return ƒXƒƒbƒg‚Ì’l
+	 * indexç•ªç›®ã®ã‚¹ãƒ­ãƒƒãƒˆã®å€¤ã‚’è¿”ã™ï¼
+	 * @param index å€¤ã‚’å¾—ãŸã„ã‚¹ãƒ­ãƒƒãƒˆã®ä½ç½®
+	 * @return ã‚¹ãƒ­ãƒƒãƒˆã®å€¤
 	 * @since 2 isao
 	 */
 	public double getSlotValue(int index) {
@@ -126,8 +126,8 @@ public class TCRoulette implements Serializable {
 	}
 
 	/**
-	 * ƒ‹[ƒŒƒbƒg‚ğ‰ñ‚µ‚ÄCƒ‰ƒ“ƒ_ƒ€‚É”Ô†‚ğ•Ô‚·
-	 * @return ‘I‚Î‚ê‚½”Ô†
+	 * ãƒ«ãƒ¼ãƒ¬ãƒƒãƒˆã‚’å›ã—ã¦ï¼Œãƒ©ãƒ³ãƒ€ãƒ ã«ç•ªå·ã‚’è¿”ã™
+	 * @return é¸ã°ã‚ŒãŸç•ªå·
 	 * @since 2 isao
 	 */
 	public int doIt() {

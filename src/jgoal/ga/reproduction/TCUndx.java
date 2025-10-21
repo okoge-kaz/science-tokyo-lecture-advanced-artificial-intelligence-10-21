@@ -217,7 +217,7 @@ public class TCUndx<X extends ICRealSolution> implements Serializable {
 		v1v3.sub(v1);
 		TCMatrix tmp = new TCMatrix(fEVector);
 		tmp.times(TCMatrixUtility.innerProduct(fEVector, v1v3));
-//		tmp.scalarProduct(fEVector.innerProduct(v1v3)); //TODO ‚Ç‚¤‚â‚Á‚Äs—ñ‰‰Z‚Å“àÏ‚ğ‘‚­‚©... uemura
+//		tmp.scalarProduct(fEVector.innerProduct(v1v3)); //TODO ã©ã†ã‚„ã£ã¦è¡Œåˆ—æ¼”ç®—ã§å†…ç©ã‚’æ›¸ãã‹... uemura
 		TCMatrix perpendicular = new TCMatrix(v1v3); // the perpendicular vector from v3 to the primary component
 		perpendicular.sub(tmp);
 		double d2 = perpendicular.normF();
@@ -225,8 +225,8 @@ public class TCUndx<X extends ICRealSolution> implements Serializable {
 	}
 	
 	/**
-	 * Œë·‚ğl—¶‚µ‚Ä”äŠr
-	 * 20110707 jgoal2010‚ÌTCComparator‚ÉÀ‘•‚³‚ê‚Ä‚¢‚é‚ªCˆÚA‚·‚é‚©•s–¾‚Ì‚½‚ß‚±‚±‚Éì¬D
+	 * èª¤å·®ã‚’è€ƒæ…®ã—ã¦æ¯”è¼ƒ
+	 * 20110707 jgoal2010ã®TCComparatorã«å®Ÿè£…ã•ã‚Œã¦ã„ã‚‹ãŒï¼Œç§»æ¤ã™ã‚‹ã‹ä¸æ˜ã®ãŸã‚ã“ã“ã«ä½œæˆï¼
 	 * @author uemura
 	 * @param d1
 	 * @param d2

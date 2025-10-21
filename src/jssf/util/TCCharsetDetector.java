@@ -12,12 +12,12 @@ import java.nio.charset.Charset;
  * Detects a charset for a text file or stream.
  * The recognizable charsets are SJIS, EUC, UTF8, JIS, and ASCII.
  * <p>
- * ƒeƒLƒXƒgƒtƒ@ƒCƒ‹‚ğ“Ç‚ŞÛCƒ†[ƒU‚ª•¶šƒR[ƒh‚ğw’è‚µ‚È‚¯‚ê‚ÎC
- * Java‚ÍOS‚ÌƒfƒtƒHƒ‹ƒg‚Ì•¶šƒR[ƒh‚Åƒtƒ@ƒCƒ‹‚ğˆ—‚µCJava‚Ì“à•”ƒR[ƒh‚Å‚ ‚éUTF-8‚É•ÏŠ·‚µ‚Ü‚·D
- * ‘‚«o‚·‚Æ‚«‚É‚ÍUTF-8‚©‚çOS‚ÌƒfƒtƒHƒ‹ƒg‚Ì•¶šƒR[ƒh‚É•ÏŠ·‚µ‚Ä‘‚«o‚µ‚Ü‚·D
- * ‚±‚Ì“®ì‚ÍCˆÙ‚È‚éOSã‚Åì‚ç‚ê‚½ƒeƒLƒXƒgƒtƒ@ƒCƒ‹‚ğˆµ‚¤ê‡‚É–â‘è‚Æ‚È‚è‚Ü‚·D
- * •¶š‰»‚¯‚ğ–h‚®‚É‚ÍC“Ç‚İ‘O‚Éƒtƒ@ƒCƒ‹‚Ì•¶šƒR[ƒh‚ğ”»•Ê‚µC
- * ”»•Ê‚³‚ê‚½•¶šƒR[ƒh‚ğInputStreamReader‚Éw’è‚·‚éˆ—‚ª•K—v‚Å‚·D
+ * ãƒ†ã‚­ã‚¹ãƒˆãƒ•ã‚¡ã‚¤ãƒ«ã‚’èª­è¾¼ã‚€éš›ï¼Œãƒ¦ãƒ¼ã‚¶ãŒæ–‡å­—ã‚³ãƒ¼ãƒ‰ã‚’æŒ‡å®šã—ãªã‘ã‚Œã°ï¼Œ
+ * Javaã¯OSã®ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã®æ–‡å­—ã‚³ãƒ¼ãƒ‰ã§ãƒ•ã‚¡ã‚¤ãƒ«ã‚’å‡¦ç†ã—ï¼ŒJavaã®å†…éƒ¨ã‚³ãƒ¼ãƒ‰ã§ã‚ã‚‹UTF-8ã«å¤‰æ›ã—ã¾ã™ï¼
+ * æ›¸ãå‡ºã™ã¨ãã«ã¯UTF-8ã‹ã‚‰OSã®ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã®æ–‡å­—ã‚³ãƒ¼ãƒ‰ã«å¤‰æ›ã—ã¦æ›¸ãå‡ºã—ã¾ã™ï¼
+ * ã“ã®å‹•ä½œã¯ï¼Œç•°ãªã‚‹OSä¸Šã§ä½œã‚‰ã‚ŒãŸãƒ†ã‚­ã‚¹ãƒˆãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ‰±ã†å ´åˆã«å•é¡Œã¨ãªã‚Šã¾ã™ï¼
+ * æ–‡å­—åŒ–ã‘ã‚’é˜²ãã«ã¯ï¼Œèª­è¾¼ã¿å‰ã«ãƒ•ã‚¡ã‚¤ãƒ«ã®æ–‡å­—ã‚³ãƒ¼ãƒ‰ã‚’åˆ¤åˆ¥ã—ï¼Œ
+ * åˆ¤åˆ¥ã•ã‚ŒãŸæ–‡å­—ã‚³ãƒ¼ãƒ‰ã‚’InputStreamReaderã«æŒ‡å®šã™ã‚‹å‡¦ç†ãŒå¿…è¦ã§ã™ï¼
  * <p>
  * The detection of this algorithm is carried out by utilizing
  * the gap of the occurence ranges of the charsets in ASCII code.
@@ -34,7 +34,7 @@ public class TCCharsetDetector implements Serializable {
 
 	/*
 	 * I know that my algorithm cannot distinguish SJIS, MS932, and MS943 properly.
-	 * However, since the operating systems used in Ono Lab. are only Windows, FedoraCand CentOS,
+	 * However, since the operating systems used in Ono Lab. are only Windows, Fedoraï¼Œand CentOS,
 	 * the capability is enough to detect any kind of files they created.
 	 */
 	public static final Charset SJIS = Charset.isSupported("MS932") ? Charset.forName("MS932") : Charset.forName("Shift_JIS");
@@ -49,12 +49,12 @@ public class TCCharsetDetector implements Serializable {
 
 	public static final Charset UNKNOWN = null;
 
-	/** ƒtƒ@ƒCƒ‹‚©‚ç‰½ƒoƒCƒg“Ç‚İ‚ñ‚Å”»•Ê‚É—˜—p‚·‚é‚© */
+	/** ãƒ•ã‚¡ã‚¤ãƒ«ã‹ã‚‰ä½•ãƒã‚¤ãƒˆèª­ã¿è¾¼ã‚“ã§åˆ¤åˆ¥ã«åˆ©ç”¨ã™ã‚‹ã‹ */
 	private int fBytesForCheck;
 	
 	/**
-	 * ƒtƒ@ƒCƒ‹‚Ìæ“ªbytesForCheckƒoƒCƒg‚ğ—˜—p‚µ‚Ä•¶šƒR[ƒh‚ğ”»•Ê‚·‚é”»•ÊŠí‚ğ•Ô‚·D
-	 * @param bytesForCheck ”»•Ê‚É—˜—p‚·‚éƒoƒCƒg”
+	 * ãƒ•ã‚¡ã‚¤ãƒ«ã®å…ˆé ­bytesForCheckãƒã‚¤ãƒˆã‚’åˆ©ç”¨ã—ã¦æ–‡å­—ã‚³ãƒ¼ãƒ‰ã‚’åˆ¤åˆ¥ã™ã‚‹åˆ¤åˆ¥å™¨ã‚’è¿”ã™ï¼
+	 * @param bytesForCheck åˆ¤åˆ¥ã«åˆ©ç”¨ã™ã‚‹ãƒã‚¤ãƒˆæ•°
 	 * @since 2 hmkz
 	 */
 	public TCCharsetDetector(int bytesForCheck) {
@@ -62,60 +62,60 @@ public class TCCharsetDetector implements Serializable {
 	}
 
 	/**
-	 * ƒtƒ@ƒCƒ‹‚Ìæ“ª6144ƒoƒCƒg‚ğ—˜—p‚µ‚Ä•¶šƒR[ƒh‚ğ”»•Ê‚·‚é”»•ÊŠí‚ğ•Ô‚·D
+	 * ãƒ•ã‚¡ã‚¤ãƒ«ã®å…ˆé ­6144ãƒã‚¤ãƒˆã‚’åˆ©ç”¨ã—ã¦æ–‡å­—ã‚³ãƒ¼ãƒ‰ã‚’åˆ¤åˆ¥ã™ã‚‹åˆ¤åˆ¥å™¨ã‚’è¿”ã™ï¼
 	 * @since 2 hmkz
 	 */
 	public TCCharsetDetector() {
-		this(6144);	// 2ƒoƒCƒg•¶š‚Æ3ƒoƒCƒg•¶š‚Ì‰Â”\«‚ª‚ ‚é‚Ì‚Å6‚Ì”{”D
+		this(6144);	// 2ãƒã‚¤ãƒˆæ–‡å­—ã¨3ãƒã‚¤ãƒˆæ–‡å­—ã®å¯èƒ½æ€§ãŒã‚ã‚‹ã®ã§6ã®å€æ•°ï¼
 	}
 	
 	/**
-	 * ƒtƒ@ƒCƒ‹‚Ì•¶šƒR[ƒh‚ğ”»’è‚µC”»’è‚³‚ê‚½ƒR[ƒh‚Ì•¶šƒZƒbƒg‚ğ•Ô‚·D
-	 * ”»•Ê‚Å‚«‚é•¶šƒR[ƒh‚ÍSJIS, EUC, UTF8, JIS, ASCII‚Å‚ ‚èC
-	 * ‚»‚êˆÈŠO‚Ì•¶šƒR[ƒh‚¾‚Æ”»’è‚³‚ê‚½ê‡‚É‚Ínull‚ğ•Ô‚·D
-	 * @param is •¶šƒR[ƒh‚Ì”»’è‚ğó‚¯‚é“ü—ÍƒXƒgƒŠ[ƒ€D
-	 * @return ƒtƒ@ƒCƒ‹‚ÌƒGƒ“ƒR[ƒfƒBƒ“ƒO‚Ég‚í‚ê‚Ä‚¢‚é•¶šƒZƒbƒgD
-	 * @throws FileNotFoundException ƒtƒ@ƒCƒ‹filename‚ª‘¶İ‚µ‚È‚¢‚Æ‚«D
-	 * @throws IOException ƒtƒ@ƒCƒ‹‚Ì“Ç‚İ‚İ’†‚ÉƒGƒ‰[‚ª”­¶‚µ‚½‚Æ‚«D
+	 * ãƒ•ã‚¡ã‚¤ãƒ«ã®æ–‡å­—ã‚³ãƒ¼ãƒ‰ã‚’åˆ¤å®šã—ï¼Œåˆ¤å®šã•ã‚ŒãŸã‚³ãƒ¼ãƒ‰ã®æ–‡å­—ã‚»ãƒƒãƒˆã‚’è¿”ã™ï¼
+	 * åˆ¤åˆ¥ã§ãã‚‹æ–‡å­—ã‚³ãƒ¼ãƒ‰ã¯SJIS, EUC, UTF8, JIS, ASCIIã§ã‚ã‚Šï¼Œ
+	 * ãã‚Œä»¥å¤–ã®æ–‡å­—ã‚³ãƒ¼ãƒ‰ã ã¨åˆ¤å®šã•ã‚ŒãŸå ´åˆã«ã¯nullã‚’è¿”ã™ï¼
+	 * @param is æ–‡å­—ã‚³ãƒ¼ãƒ‰ã®åˆ¤å®šã‚’å—ã‘ã‚‹å…¥åŠ›ã‚¹ãƒˆãƒªãƒ¼ãƒ ï¼
+	 * @return ãƒ•ã‚¡ã‚¤ãƒ«ã®ã‚¨ãƒ³ã‚³ãƒ¼ãƒ‡ã‚£ãƒ³ã‚°ã«ä½¿ã‚ã‚Œã¦ã„ã‚‹æ–‡å­—ã‚»ãƒƒãƒˆï¼
+	 * @throws FileNotFoundException ãƒ•ã‚¡ã‚¤ãƒ«filenameãŒå­˜åœ¨ã—ãªã„ã¨ãï¼
+	 * @throws IOException ãƒ•ã‚¡ã‚¤ãƒ«ã®èª­ã¿è¾¼ã¿ä¸­ã«ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿã—ãŸã¨ãï¼
 	 * @since 2 hmkz
 	 */
 	public Charset detectCharset(InputStream is) throws IOException {
 		BufferedInputStream bis = new BufferedInputStream(is);
-		// Å‰‚ÌƒAƒXƒL[ƒR[ƒh‚Í“Ç‚İ‚Æ‚Î‚·(‚½‚¾‚µJISƒGƒXƒP[ƒvƒR[ƒh‚Í‚Æ‚Î‚³‚È‚¢)
+		// æœ€åˆã®ã‚¢ã‚¹ã‚­ãƒ¼ã‚³ãƒ¼ãƒ‰ã¯èª­ã¿ã¨ã°ã™(ãŸã ã—JISã‚¨ã‚¹ã‚±ãƒ¼ãƒ—ã‚³ãƒ¼ãƒ‰ã¯ã¨ã°ã•ãªã„)
 		int ch;
 		do {
 			ch = bis.read();
 		} while ((ch <= 0x7f && ch != -1) && ch != 0x1b);
 
 		int noOfNonASCIIBytes = 0;
-		int[] nonASCIIBytes = new int[fBytesForCheck];	// “Ç‚İ‚ñ‚¾ƒoƒCƒg—ñ‚Ì‚¤‚¿”ñASCIIƒoƒCƒg‚ªŠi”[‚³‚ê‚é
+		int[] nonASCIIBytes = new int[fBytesForCheck];	// èª­ã¿è¾¼ã‚“ã ãƒã‚¤ãƒˆåˆ—ã®ã†ã¡éASCIIãƒã‚¤ãƒˆãŒæ ¼ç´ã•ã‚Œã‚‹
 		while (ch != -1 && noOfNonASCIIBytes < fBytesForCheck) {
 			nonASCIIBytes[noOfNonASCIIBytes] = ch;
 			noOfNonASCIIBytes++;
 			ch = bis.read();
 		}
-		if (noOfNonASCIIBytes == 0) {	// ƒoƒCƒg—ñ‚ÍASCIIƒR[ƒh‚¾‚¯‚©‚ç¬‚é
+		if (noOfNonASCIIBytes == 0) {	// ãƒã‚¤ãƒˆåˆ—ã¯ASCIIã‚³ãƒ¼ãƒ‰ã ã‘ã‹ã‚‰æˆã‚‹
 			return ASCII;
 		}
 
 		boolean isFirstChar = true;
 		int noOfKanjiBytes = 0;
-		int[] kanjiBytes = new int[noOfNonASCIIBytes];	// ”ñASCIIƒoƒCƒg‚©‚çŠ¿š‚Ì‚İ‚ğæ‚èo‚µ‚½‚à‚Ì‚ªŠi”[‚³‚ê‚é
+		int[] kanjiBytes = new int[noOfNonASCIIBytes];	// éASCIIãƒã‚¤ãƒˆã‹ã‚‰æ¼¢å­—ã®ã¿ã‚’å–ã‚Šå‡ºã—ãŸã‚‚ã®ãŒæ ¼ç´ã•ã‚Œã‚‹
 		for (int i = 0; noOfKanjiBytes < noOfNonASCIIBytes && i < noOfNonASCIIBytes; i++) {
 			if (isFirstChar && ((nonASCIIBytes[i] <= 0x7f) && (nonASCIIBytes[i] != 0x1b))) {
 				continue;
 			}
-			if (nonASCIIBytes[i] == 0x1b) { // JISƒGƒXƒP[ƒvƒR[ƒh‚ªŒ©•t‚©‚Á‚½‚çJIS‚Æ”»’è‚µ‚ÄI‚í‚é
+			if (nonASCIIBytes[i] == 0x1b) { // JISã‚¨ã‚¹ã‚±ãƒ¼ãƒ—ã‚³ãƒ¼ãƒ‰ãŒè¦‹ä»˜ã‹ã£ãŸã‚‰JISã¨åˆ¤å®šã—ã¦çµ‚ã‚ã‚‹
 				return JIS;
 			}
 			if (isFirstChar && (0x80 <= nonASCIIBytes[i]) && (nonASCIIBytes[i] <= 0x9f)) {
-				// Å‰‚Éo‚­‚í‚µ‚½”ñASCIIƒoƒCƒg‚ª‚±‚Ì”ÍˆÍ‚È‚çSJIS‚Æ”»’è
+				// æœ€åˆã«å‡ºãã‚ã—ãŸéASCIIãƒã‚¤ãƒˆãŒã“ã®ç¯„å›²ãªã‚‰SJISã¨åˆ¤å®š
 				return SJIS;
 			}
 			if (isFirstChar
 					&& (((0xa1 <= nonASCIIBytes[i]) && (nonASCIIBytes[i] < 0xe0))
 							|| ((0xfc < nonASCIIBytes[i]) && (nonASCIIBytes[i] < 0xff)))) {
-				// Å‰‚Éo‚­‚í‚µ‚½”ñASCIIƒoƒCƒg‚ª‚±‚Ì”ÍˆÍ‚È‚çEUC‚Æ”»’è
+				// æœ€åˆã«å‡ºãã‚ã—ãŸéASCIIãƒã‚¤ãƒˆãŒã“ã®ç¯„å›²ãªã‚‰EUCã¨åˆ¤å®š
 				return EUC;
 			} else {
 				kanjiBytes[noOfKanjiBytes] = nonASCIIBytes[i];
@@ -125,14 +125,14 @@ public class TCCharsetDetector implements Serializable {
 		}
 
 		// UTF-8: [00-7F] or [c0-df][80-bf] or [e0-ef][80-bf][80-bf]
-		// Å‰‚ÌŠ¿š‚Ì‘æ1ƒoƒCƒg‚Í‚·‚Å‚Éƒ`ƒFƒbƒN‚³‚ê‚Ä‚¢‚éD
-		// UTF8‚È‚ç‚ÎŸ‚Ìfor•¶‚ğbreak‚µ‚È‚¢‚Í‚¸D
+		// æœ€åˆã®æ¼¢å­—ã®ç¬¬1ãƒã‚¤ãƒˆã¯ã™ã§ã«ãƒã‚§ãƒƒã‚¯ã•ã‚Œã¦ã„ã‚‹ï¼
+		// UTF8ãªã‚‰ã°æ¬¡ã®foræ–‡ã‚’breakã—ãªã„ã¯ãšï¼
 		boolean isUTF = false;
 		for (int i = 0; i < noOfKanjiBytes - 2; ) {
 			if (0xe0 <= kanjiBytes[i]&& kanjiBytes[i] <= 0xef) {
 				if (0x80 <= kanjiBytes[i + 1] && kanjiBytes[i + 1] <= 0xbf) {
 					if (0x80 <= kanjiBytes[i + 2]&& kanjiBytes[i + 2] <= 0xbf) {
-						isUTF = true; // UTF 3ƒoƒCƒgƒpƒ^[ƒ“
+						isUTF = true; // UTF 3ãƒã‚¤ãƒˆãƒ‘ã‚¿ãƒ¼ãƒ³
 						i += 3;
 					} else {
 						isUTF = false;
@@ -144,7 +144,7 @@ public class TCCharsetDetector implements Serializable {
 				}
 			} else if (0xc0 <= kanjiBytes[i]&& kanjiBytes[i] <= 0xdf) {
 				if (0x80 <= kanjiBytes[i + 1] && kanjiBytes[i + 1] <= 0xbf) {
-					isUTF = true; // UTF 2ƒoƒCƒgƒpƒ^[ƒ“
+					isUTF = true; // UTF 2ãƒã‚¤ãƒˆãƒ‘ã‚¿ãƒ¼ãƒ³
 					i += 2;
 				} else {
 					isUTF = false;
@@ -158,8 +158,8 @@ public class TCCharsetDetector implements Serializable {
 			return UTF8;
 		}
 
-		// ˆÈ‰ºUTF‚Å‚È‚¢C]‚Á‚ÄŠ¿š‚ÍSJIS‚Ü‚½‚ÍEUC‚Ì2ƒoƒCƒg•¶š‚Æ‚µ‚Ä‘æ1,2ƒoƒCƒg•”•ª‚ğ‘S‚Äƒ`ƒFƒbƒN‚·‚é.
-		// ¡“x‚ÍSJIS‚Ü‚½‚ÍEUC‚Å‚È‚¢ğŒ‚ğ‚İ‚Ä‚¢‚­
+		// ä»¥ä¸‹UTFã§ãªã„ï¼Œå¾“ã£ã¦æ¼¢å­—ã¯SJISã¾ãŸã¯EUCã®2ãƒã‚¤ãƒˆæ–‡å­—ã¨ã—ã¦ç¬¬1,2ãƒã‚¤ãƒˆéƒ¨åˆ†ã‚’å…¨ã¦ãƒã‚§ãƒƒã‚¯ã™ã‚‹.
+		// ä»Šåº¦ã¯SJISã¾ãŸã¯EUCã§ãªã„æ¡ä»¶ã‚’ã¿ã¦ã„ã
 		// EUC: [a1-ff][a1-ff]
 		boolean isEUC = true;
 		for (int i = 0; i < noOfKanjiBytes; ) {
@@ -174,8 +174,8 @@ public class TCCharsetDetector implements Serializable {
 				i += 2;
 			}
 		}
-		// SJIS‘æ1ƒoƒCƒg: [80-9f], [e0-ea], [ed-fc]
-		// SJIS‘æ2ƒoƒCƒg: [40-fe]
+		// SJISç¬¬1ãƒã‚¤ãƒˆ: [80-9f], [e0-ea], [ed-fc]
+		// SJISç¬¬2ãƒã‚¤ãƒˆ: [40-fe]
 		boolean isSJIS = true;
 		for (int i = 0; i < noOfKanjiBytes; ) {
 			if (kanjiBytes[i] <= 0x7f) {
@@ -191,27 +191,27 @@ public class TCCharsetDetector implements Serializable {
 			}
 		}
 
-		// ‚±‚±‚©‚çæ‚ÍŠm—¦“I”»’f‚Æ‚È‚è‚Ü‚·‚ªC’Êí‚Ì“ú–{Œê•¶‘‚Í•K‚¸•½‚©‚È‚ğ‚Ó‚­‚İC
-		// •½‚©‚È‚ÌSJISƒR[ƒh‚ÆEUCƒR[ƒh‚Æ‚Íd•¡‚µ‚Ü‚¹‚ñ‚©‚çCuEUC‚Å‚È‚¢v‚Æ‚¢‚¤”»’f‚Í‚©‚È‚èŠmÀ‚É‚Å‚«‚Ü‚·D
-		if (!isEUC) {	// EUC‚Å‚È‚¢”»’f‚ğ—Dæ
+		// ã“ã“ã‹ã‚‰å…ˆã¯ç¢ºç‡çš„åˆ¤æ–­ã¨ãªã‚Šã¾ã™ãŒï¼Œé€šå¸¸ã®æ—¥æœ¬èªæ–‡æ›¸ã¯å¿…ãšå¹³ã‹ãªã‚’ãµãã¿ï¼Œ
+		// å¹³ã‹ãªã®SJISã‚³ãƒ¼ãƒ‰ã¨EUCã‚³ãƒ¼ãƒ‰ã¨ã¯é‡è¤‡ã—ã¾ã›ã‚“ã‹ã‚‰ï¼Œã€ŒEUCã§ãªã„ã€ã¨ã„ã†åˆ¤æ–­ã¯ã‹ãªã‚Šç¢ºå®Ÿã«ã§ãã¾ã™ï¼
+		if (!isEUC) {	// EUCã§ãªã„åˆ¤æ–­ã‚’å„ªå…ˆ
 			return SJIS;
 		} else if (!isSJIS) {
 			return EUC;	
 		} else if (isEUC && isSJIS) {
-			return EUC;	// SJIS‘æ“ñ…€•”•ª‚ªd•¡‚µ‚Ä‚¢‚é‚ª”»’è‚É¢‚é‚Ù‚Ç‘æ“ñ…€‚ª‘±o‚·‚é‚±‚Æ‚Í‚È‚¢‚¾‚ë‚¤
+			return EUC;	// SJISç¬¬äºŒæ°´æº–éƒ¨åˆ†ãŒé‡è¤‡ã—ã¦ã„ã‚‹ãŒåˆ¤å®šã«å›°ã‚‹ã»ã©ç¬¬äºŒæ°´æº–ãŒç¶šå‡ºã™ã‚‹ã“ã¨ã¯ãªã„ã ã‚ã†
 		} else {
 			return UNKNOWN;
 		}		
 	}
 
 	/**
-	 * ƒtƒ@ƒCƒ‹‚Ì•¶šƒR[ƒh‚ğ”»’è‚µC”»’è‚³‚ê‚½ƒR[ƒh‚Ì•¶šƒZƒbƒg‚ğ•Ô‚·D
-	 * ”»•Ê‚Å‚«‚é•¶šƒR[ƒh‚ÍSJIS, EUC, UTF8, JIS, ASCII‚Å‚ ‚èC
-	 * ‚»‚êˆÈŠO‚Ì•¶šƒR[ƒh‚¾‚Æ”»’è‚³‚ê‚½ê‡‚É‚Ínull‚ğ•Ô‚·D
-	 * @param filename •¶šƒR[ƒh‚Ì”»’è‚ğó‚¯‚éƒtƒ@ƒCƒ‹‚ÌƒpƒXD
-	 * @return ƒtƒ@ƒCƒ‹‚ÌƒGƒ“ƒR[ƒfƒBƒ“ƒO‚Ég‚í‚ê‚Ä‚¢‚é•¶šƒZƒbƒgD
-	 * @throws FileNotFoundException ƒtƒ@ƒCƒ‹filename‚ª‘¶İ‚µ‚È‚¢‚Æ‚«D
-	 * @throws IOException ƒtƒ@ƒCƒ‹‚Ì“Ç‚İ‚İ’†‚ÉƒGƒ‰[‚ª”­¶‚µ‚½‚Æ‚«D
+	 * ãƒ•ã‚¡ã‚¤ãƒ«ã®æ–‡å­—ã‚³ãƒ¼ãƒ‰ã‚’åˆ¤å®šã—ï¼Œåˆ¤å®šã•ã‚ŒãŸã‚³ãƒ¼ãƒ‰ã®æ–‡å­—ã‚»ãƒƒãƒˆã‚’è¿”ã™ï¼
+	 * åˆ¤åˆ¥ã§ãã‚‹æ–‡å­—ã‚³ãƒ¼ãƒ‰ã¯SJIS, EUC, UTF8, JIS, ASCIIã§ã‚ã‚Šï¼Œ
+	 * ãã‚Œä»¥å¤–ã®æ–‡å­—ã‚³ãƒ¼ãƒ‰ã ã¨åˆ¤å®šã•ã‚ŒãŸå ´åˆã«ã¯nullã‚’è¿”ã™ï¼
+	 * @param filename æ–‡å­—ã‚³ãƒ¼ãƒ‰ã®åˆ¤å®šã‚’å—ã‘ã‚‹ãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒ‘ã‚¹ï¼
+	 * @return ãƒ•ã‚¡ã‚¤ãƒ«ã®ã‚¨ãƒ³ã‚³ãƒ¼ãƒ‡ã‚£ãƒ³ã‚°ã«ä½¿ã‚ã‚Œã¦ã„ã‚‹æ–‡å­—ã‚»ãƒƒãƒˆï¼
+	 * @throws FileNotFoundException ãƒ•ã‚¡ã‚¤ãƒ«filenameãŒå­˜åœ¨ã—ãªã„ã¨ãï¼
+	 * @throws IOException ãƒ•ã‚¡ã‚¤ãƒ«ã®èª­ã¿è¾¼ã¿ä¸­ã«ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿã—ãŸã¨ãï¼
 	 * @since 2 hmkz
 	 */
 	public Charset detectCharset(String filename) throws FileNotFoundException, IOException {

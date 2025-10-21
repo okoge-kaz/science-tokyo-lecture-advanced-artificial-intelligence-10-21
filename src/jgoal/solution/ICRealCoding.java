@@ -23,8 +23,8 @@ public interface ICRealCoding {
 	TCMatrix getVector();
 
 	/**
-	 * �x�N�g�����X�V���ꂽ���Ƃ�ʒm����D
-	 * getVector���\�b�h�Ŏ擾�����x�N�g���̓��e���X�V�����ꍇ�́C�K�����̃��\�b�h���ĂԂ��ƁD
+	 * ベクトルが更新されたことを通知する．
+	 * getVectorメソッドで取得したベクトルの内容を更新した場合は，必ずこのメソッドを呼ぶこと．
 	 *
 	 * @since 2 isao
 	 */

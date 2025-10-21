@@ -16,14 +16,14 @@ import jssf.random.TCJava48BitLcg;
  * The transition of the best evaluation value in the population in each trial is stored in a log file.
  * The log file is saved in the CSV format.
  * The experimental setting is as follows.
- * - Benchmark functionF the double sphere functionC
- * - DimensionF n=10C
- * - Initial region: [-5,+5]^nC
- * - Population sizeF 14nC
- * - The number of offspringF 5nC
+ * - Benchmark functionï¼š the double sphere functionï¼Œ
+ * - Dimensionï¼š n=10ï¼Œ
+ * - Initial region: [-5,+5]^nï¼Œ
+ * - Population sizeï¼š 14nï¼Œ
+ * - The number of offspringï¼š 5nï¼Œ
  * - The maximum number of evaluations for each iteration: 50000,
  * - The maximum number of iterations for multi-start: 20,
- * - Log filenameF MsArexJggDoubleSphereUV.csv
+ * - Log filenameï¼š MsArexJggDoubleSphereUV.csv
  *
  * @author isao
  *

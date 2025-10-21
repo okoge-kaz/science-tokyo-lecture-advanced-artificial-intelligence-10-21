@@ -9,14 +9,14 @@ import jssf.random.ICRandom;
 import jssf.random.TCJava48BitLcg;
 
 /**
- * AREX/JGG‚ğ‚PsÀs‚·‚é‚½‚ß‚ÌƒvƒƒOƒ‰ƒ€Dİ’è‚ÍˆÈ‰º‚Ì’Ê‚èF
- * ƒxƒ“ƒ`ƒ}[ƒNŠÖ”Fk-tablet (k=n/4)C
- * ŸŒ³”Fn=20C
- * ‰Šú‰»—ÌˆæF[-5,+5]^nC
- * W’cƒTƒCƒYF5nC
- * qŒÂ‘Ì¶¬”F4nC
- * ‘Å‚¿Ø‚è•]‰¿‰ñ”Fn ~ 1e5C
- * ‘Å‚¿Ø‚è•]‰¿’lF1.0 ~ 1e-7D
+ * AREX/JGGã‚’ï¼‘è©¦è¡Œå®Ÿè¡Œã™ã‚‹ãŸã‚ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ï¼è¨­å®šã¯ä»¥ä¸‹ã®é€šã‚Šï¼š
+ * ãƒ™ãƒ³ãƒãƒãƒ¼ã‚¯é–¢æ•°ï¼šk-tablet (k=n/4)ï¼Œ
+ * æ¬¡å…ƒæ•°ï¼šn=20ï¼Œ
+ * åˆæœŸåŒ–é ˜åŸŸï¼š[-5,+5]^nï¼Œ
+ * é›†å›£ã‚µã‚¤ã‚ºï¼š5nï¼Œ
+ * å­å€‹ä½“ç”Ÿæˆæ•°ï¼š4nï¼Œ
+ * æ‰“ã¡åˆ‡ã‚Šè©•ä¾¡å›æ•°ï¼šn Ã— 1e5ï¼Œ
+ * æ‰“ã¡åˆ‡ã‚Šè©•ä¾¡å€¤ï¼š1.0 Ã— 1e-7ï¼
  * 
  * @author isao
  *
@@ -24,39 +24,39 @@ import jssf.random.TCJava48BitLcg;
 public class TSArexJggS {
 	
 	/**
-	 * ‰ŠúW’c‚Ì‰Šú‰»‚ğs‚¤D
-	 * @param population ‰ŠúW’c
-	 * @param min ‰Šú‰»—Ìˆæ‚ÌÅ¬’l
-	 * @param max ‰Šú‰»—Ìˆæ‚ÌÅ‘å’l
-	 * @param random —”¶¬Ší
+	 * åˆæœŸé›†å›£ã®åˆæœŸåŒ–ã‚’è¡Œã†ï¼
+	 * @param population åˆæœŸé›†å›£
+	 * @param min åˆæœŸåŒ–é ˜åŸŸã®æœ€å°å€¤
+	 * @param max åˆæœŸåŒ–é ˜åŸŸã®æœ€å¤§å€¤
+	 * @param random ä¹±æ•°ç”Ÿæˆå™¨
 	 */
 	private static void initializePopulation(TCSolutionSet<TSRealSolution> population, double min, double max, ICRandom random) {
 		for (TSRealSolution s: population) {
-			s.getVector().rand(random).times(max - min).add(min); //ŒÂ‘Ì‚ÌÀ•W‚ğ”ÍˆÍ[min, max]^n‚Ì—”‚Å‰Šú‰»D
+			s.getVector().rand(random).times(max - min).add(min); //å€‹ä½“ã®åº§æ¨™ã‚’ç¯„å›²[min, max]^nã®ä¹±æ•°ã§åˆæœŸåŒ–ï¼
 		}
 	}
 
 	/**
-	 * W’c’†‚Ì‘S‚Ä‚ÌŒÂ‘Ì‚Ì•]‰¿‚ğs‚¤D
-	 * @param population W’c
+	 * é›†å›£ä¸­ã®å…¨ã¦ã®å€‹ä½“ã®è©•ä¾¡ã‚’è¡Œã†ï¼
+	 * @param population é›†å›£
 	 */
 	private static void evaluate(TCSolutionSet<TSRealSolution> population) {
 		for (TSRealSolution s: population) {
-			double eval = ktablet(s.getVector()); //k-tabletŠÖ”‚Ì’l‚ğ“¾‚éD
-			s.setEvaluationValue(eval); //ŒÂ‘Ì‚É•]‰¿’l‚ğİ’èD
-			s.setStatus(Status.FEASIBLE); //ŒÂ‘Ì‚Ìó‘Ô‚ğuÀs‰Â”\v‚Éİ’èD
+			double eval = ktablet(s.getVector()); //k-tableté–¢æ•°ã®å€¤ã‚’å¾—ã‚‹ï¼
+			s.setEvaluationValue(eval); //å€‹ä½“ã«è©•ä¾¡å€¤ã‚’è¨­å®šï¼
+			s.setStatus(Status.FEASIBLE); //å€‹ä½“ã®çŠ¶æ…‹ã‚’ã€Œå®Ÿè¡Œå¯èƒ½ã€ã«è¨­å®šï¼
 		}
 	}
 	
 	/**
-	 * k-tabletŠÖ” (k=n/4)
-	 * @param s ŒÂ‘Ì
+	 * k-tableté–¢æ•° (k=n/4)
+	 * @param s å€‹ä½“
 	 */
 	private static double ktablet(TCMatrix x) {
 		int k = (int)((double)x.getDimension() /4.0); //k=n/4
-		double result = 0.0; //•]‰¿’l‚ğ‰Šú‰»
+		double result = 0.0; //è©•ä¾¡å€¤ã‚’åˆæœŸåŒ–
 		for (int i = 0; i < x.getDimension(); ++i) {
-			double xi = x.getValue(i); //i”Ô–Ú‚ÌŸŒ³‚Ì—v‘f
+			double xi = x.getValue(i); //iç•ªç›®ã®æ¬¡å…ƒã®è¦ç´ 
 			if (i < k) {
 				result += xi * xi;				
 			} else {
@@ -67,34 +67,34 @@ public class TSArexJggS {
 	}
 	
 	/**
-	 * ƒƒCƒ“ƒƒ\ƒbƒhD
-	 * @param args ‚È‚µ
+	 * ãƒ¡ã‚¤ãƒ³ãƒ¡ã‚½ãƒƒãƒ‰ï¼
+	 * @param args ãªã—
 	 */
 	public static void main(String[] args) {
 		boolean minimization = true;
-		int dimension = 20; //ŸŒ³”
-		int populationSize = 5 * dimension; //W’cƒTƒCƒY
-		int noOfKids = 4 * dimension; //qŒÂ‘Ì¶¬”
-		double min = -5.0; //‰Šú‰»—Ìˆæ‚ÌÅ¬’l
-		double max = +5.0; //‰Šú‰»—Ìˆæ‚ÌÅ‘å’l
-		long maxEvals = (long)(dimension * 1e5); //‘Å‚¿Ø‚è•]‰¿‰ñ”
-		ICRandom random = new TCJava48BitLcg(); //—””­¶Ší
+		int dimension = 20; //æ¬¡å…ƒæ•°
+		int populationSize = 5 * dimension; //é›†å›£ã‚µã‚¤ã‚º
+		int noOfKids = 4 * dimension; //å­å€‹ä½“ç”Ÿæˆæ•°
+		double min = -5.0; //åˆæœŸåŒ–é ˜åŸŸã®æœ€å°å€¤
+		double max = +5.0; //åˆæœŸåŒ–é ˜åŸŸã®æœ€å¤§å€¤
+		long maxEvals = (long)(dimension * 1e5); //æ‰“ã¡åˆ‡ã‚Šè©•ä¾¡å›æ•°
+		ICRandom random = new TCJava48BitLcg(); //ä¹±æ•°ç™ºç”Ÿå™¨
 		TSArexJgg ga = new TSArexJgg(minimization, dimension, populationSize, noOfKids, random); //AREX/JGG
 		
-		TCSolutionSet<TSRealSolution> population = ga.initialize(); //‰ŠúW’c‚ğ¶¬
-		initializePopulation(population, min, max, random); //‰ŠúW’c‚ğ‰Šú‰»
-		evaluate(population); //‰ŠúW’c‚ğ•]‰¿
+		TCSolutionSet<TSRealSolution> population = ga.initialize(); //åˆæœŸé›†å›£ã‚’ç”Ÿæˆ
+		initializePopulation(population, min, max, random); //åˆæœŸé›†å›£ã‚’åˆæœŸåŒ–
+		evaluate(population); //åˆæœŸé›†å›£ã‚’è©•ä¾¡
 		
-		int noOfEvals = 0; //•]‰¿‰ñ”
-		double best = ga.getBestEvaluationValue(); //W’c’†‚ÌÅ—Ç•]‰¿’l‚ğ“¾‚éD
-		System.out.println(noOfEvals + " " + best); //W’c’†‚ÌÅ—Ç•]‰¿’l‚ğ‰æ–Ê‚Éo—ÍD
-		while (best > 1e-7 && noOfEvals < maxEvals) { //I—¹ğŒDÅ—Ç’l‚ª‘Å‚¿Ø‚è•]‰¿’lˆÈ‰º‚É‚È‚Á‚½‚Æ‚«C‚à‚µ‚­‚ÍC•]‰¿‰ñ”‚ªC‘Å‚¿Ø‚è•]‰¿‰ñ”‚ğ’´‚¦‚½‚Æ‚«D
-			TCSolutionSet<TSRealSolution> offspring = ga.makeOffspring(); //qŒÂ‘ÌW‡‚ğ¶¬D
-			evaluate(offspring); //qŒÂ‘ÌW‡‚ğ•]‰¿
-			noOfEvals += offspring.size(); //•]‰¿‰ñ”‚ğXV
-			ga.nextGeneration(); //Ÿ¢‘ã‚Éi‚ß‚éD
-			best = ga.getBestEvaluationValue(); //W’c’†‚ÌÅ—Ç•]‰¿’l‚ğ“¾‚éD
-			System.out.println(noOfEvals + " " + best); //W’c’†‚ÌÅ—Ç•]‰¿’l‚ğ‰æ–Ê‚Éo—ÍD 
+		int noOfEvals = 0; //è©•ä¾¡å›æ•°
+		double best = ga.getBestEvaluationValue(); //é›†å›£ä¸­ã®æœ€è‰¯è©•ä¾¡å€¤ã‚’å¾—ã‚‹ï¼
+		System.out.println(noOfEvals + " " + best); //é›†å›£ä¸­ã®æœ€è‰¯è©•ä¾¡å€¤ã‚’ç”»é¢ã«å‡ºåŠ›ï¼
+		while (best > 1e-7 && noOfEvals < maxEvals) { //çµ‚äº†æ¡ä»¶ï¼æœ€è‰¯å€¤ãŒæ‰“ã¡åˆ‡ã‚Šè©•ä¾¡å€¤ä»¥ä¸‹ã«ãªã£ãŸã¨ãï¼Œã‚‚ã—ãã¯ï¼Œè©•ä¾¡å›æ•°ãŒï¼Œæ‰“ã¡åˆ‡ã‚Šè©•ä¾¡å›æ•°ã‚’è¶…ãˆãŸã¨ãï¼
+			TCSolutionSet<TSRealSolution> offspring = ga.makeOffspring(); //å­å€‹ä½“é›†åˆã‚’ç”Ÿæˆï¼
+			evaluate(offspring); //å­å€‹ä½“é›†åˆã‚’è©•ä¾¡
+			noOfEvals += offspring.size(); //è©•ä¾¡å›æ•°ã‚’æ›´æ–°
+			ga.nextGeneration(); //æ¬¡ä¸–ä»£ã«é€²ã‚ã‚‹ï¼
+			best = ga.getBestEvaluationValue(); //é›†å›£ä¸­ã®æœ€è‰¯è©•ä¾¡å€¤ã‚’å¾—ã‚‹ï¼
+			System.out.println(noOfEvals + " " + best); //é›†å›£ä¸­ã®æœ€è‰¯è©•ä¾¡å€¤ã‚’ç”»é¢ã«å‡ºåŠ›ï¼ 
 		}
 		
 	}

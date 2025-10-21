@@ -56,9 +56,9 @@ public class TCMatrix implements Serializable, Cloneable {
 	}
 	
 	/**
-	 * ƒRƒ“ƒXƒgƒ‰ƒNƒ^D
-	 * mŸŒ³cƒxƒNƒgƒ‹im~1s—ñj‚Æ‚µ‚Ä‰Šú‰»‚·‚éD
-	 * @param m cƒxƒNƒgƒ‹‚ÌŸŒ³”
+	 * ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ï¼
+	 * mæ¬¡å…ƒç¸¦ãƒ™ã‚¯ãƒˆãƒ«ï¼ˆmÃ—1è¡Œåˆ—ï¼‰ã¨ã—ã¦åˆæœŸåŒ–ã™ã‚‹ï¼
+	 * @param m ç¸¦ãƒ™ã‚¯ãƒˆãƒ«ã®æ¬¡å…ƒæ•°
 	 */
 	public TCMatrix(
 			@ACParam(key="RowDimension") int m
@@ -67,9 +67,9 @@ public class TCMatrix implements Serializable, Cloneable {
 	}
 	
 	/**
-	 * ƒRƒ“ƒXƒgƒ‰ƒNƒ^D
-	 * mŸŒ³cƒxƒNƒgƒ‹im~1s—ñj‚Æ‚µ‚Ä‰Šú‰»‚·‚éD
-	 * @param vector mŸŒ³cƒxƒNƒgƒ‹‚Ì—v‘f
+	 * ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ï¼
+	 * mæ¬¡å…ƒç¸¦ãƒ™ã‚¯ãƒˆãƒ«ï¼ˆmÃ—1è¡Œåˆ—ï¼‰ã¨ã—ã¦åˆæœŸåŒ–ã™ã‚‹ï¼
+	 * @param vector mæ¬¡å…ƒç¸¦ãƒ™ã‚¯ãƒˆãƒ«ã®è¦ç´ 
 	 */
 	public TCMatrix(double[] vector) {
 		this(vector.length, 1);
@@ -147,11 +147,11 @@ public class TCMatrix implements Serializable, Cloneable {
 	}
 	
 	/**
-	 * •”•ªs—ñ‚ğƒRƒs[‚·‚éD
-	 * s—ñ src ‚Ì src_i0 ‚©‚ç src_i1 sC‚¨‚æ‚Ñ src_j0 ‚©‚ç src_j1 —ñ‚É‘Î‰‚·‚é•”•ªs—ñ‚ğC
-	 * ©g‚Ì dst_i0 sC dst_j0 —ñˆÈ~‚Ì•”•ª‚ÉƒRƒs[‚·‚éD
-	 * ‚à‚µƒRƒs[‘ÎÛ‚Ì•”•ªs—ñ‚ª©g‚Ìs—ñ‚É“ü‚è‚«‚ç‚È‚¢ê‡C©g‚ÌƒTƒCƒY‚ğŠg‘å‚µC
-	 * Šg‘å‚³‚êC‚©‚Â•”•ªs—ñ‚ªƒRƒs[‚³‚ê‚È‚¢—v‘f‚É‚Í0‚ªŠi”[‚³‚ê‚éD
+	 * éƒ¨åˆ†è¡Œåˆ—ã‚’ã‚³ãƒ”ãƒ¼ã™ã‚‹ï¼
+	 * è¡Œåˆ— src ã® src_i0 ã‹ã‚‰ src_i1 è¡Œï¼ŒãŠã‚ˆã³ src_j0 ã‹ã‚‰ src_j1 åˆ—ã«å¯¾å¿œã™ã‚‹éƒ¨åˆ†è¡Œåˆ—ã‚’ï¼Œ
+	 * è‡ªèº«ã® dst_i0 è¡Œï¼Œ dst_j0 åˆ—ä»¥é™ã®éƒ¨åˆ†ã«ã‚³ãƒ”ãƒ¼ã™ã‚‹ï¼
+	 * ã‚‚ã—ã‚³ãƒ”ãƒ¼å¯¾è±¡ã®éƒ¨åˆ†è¡Œåˆ—ãŒè‡ªèº«ã®è¡Œåˆ—ã«å…¥ã‚Šãã‚‰ãªã„å ´åˆï¼Œè‡ªèº«ã®ã‚µã‚¤ã‚ºã‚’æ‹¡å¤§ã—ï¼Œ
+	 * æ‹¡å¤§ã•ã‚Œï¼Œã‹ã¤éƒ¨åˆ†è¡Œåˆ—ãŒã‚³ãƒ”ãƒ¼ã•ã‚Œãªã„è¦ç´ ã«ã¯0ãŒæ ¼ç´ã•ã‚Œã‚‹ï¼
 	 * 
 	 * @param src TCMatrix
 	 * @param src_i0 first row index
@@ -201,8 +201,8 @@ public class TCMatrix implements Serializable, Cloneable {
 	}
 	
 	/**
-	 * mŸŒ³ƒxƒNƒgƒ‹im~1s—ñj‚Éİ’è‚·‚éD
-	 * @param m cƒxƒNƒgƒ‹‚ÌŸŒ³”
+	 * mæ¬¡å…ƒãƒ™ã‚¯ãƒˆãƒ«ï¼ˆmÃ—1è¡Œåˆ—ï¼‰ã«è¨­å®šã™ã‚‹ï¼
+	 * @param m ç¸¦ãƒ™ã‚¯ãƒˆãƒ«ã®æ¬¡å…ƒæ•°
 	 */
 	public void setDimension(int m) {
 		if (fM != m || fN != 1) {
@@ -229,8 +229,8 @@ public class TCMatrix implements Serializable, Cloneable {
 	}
 	
 	/**
-	 * s”~—ñ”‚ğ•Ô‚·D
-	 * @return s”~—ñ”
+	 * è¡Œæ•°Ã—åˆ—æ•°ã‚’è¿”ã™ï¼
+	 * @return è¡Œæ•°Ã—åˆ—æ•°
 	 */
 	public int getDimension() {
 		return fM * fN;
@@ -268,9 +268,9 @@ public class TCMatrix implements Serializable, Cloneable {
 	}
 
 	/**
-	 * (0, 0)‚Ì—v‘f‚Ì’l‚ğ•Ô‚·D
-	 * ‚P~‚Ps—ñ‚Ìê‡‚Ì‚İ—LŒøD
-	 * @return (0, 0)‚Ì—v‘f‚Ì’l
+	 * (0, 0)ã®è¦ç´ ã®å€¤ã‚’è¿”ã™ï¼
+	 * ï¼‘Ã—ï¼‘è¡Œåˆ—ã®å ´åˆã®ã¿æœ‰åŠ¹ï¼
+	 * @return (0, 0)ã®è¦ç´ ã®å€¤
 	 */
 	public double getValue() {
 		assert fN == 1 && fM == 1;
@@ -278,9 +278,9 @@ public class TCMatrix implements Serializable, Cloneable {
 	}
 
 	/**
-	 * ’l‚ğƒCƒ“ƒfƒbƒNƒX‚Åw’è‚³‚ê‚½—v‘f‚Öİ’è‚·‚éB
-	 * ‚±‚±‚ÅAm~ns—ñX‚É‚¨‚¢‚ÄAX(i, j)‚É’l‚ğİ’è‚µ‚½‚¢ê‡AƒCƒ“ƒfƒbƒNƒX‚Íi*n+j‚Æ‚È‚éB
-	 * @param idx ƒCƒ“ƒfƒbƒNƒX
+	 * å€¤ã‚’ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ã§æŒ‡å®šã•ã‚ŒãŸè¦ç´ ã¸è¨­å®šã™ã‚‹ã€‚
+	 * ã“ã“ã§ã€mÃ—nè¡Œåˆ—Xã«ãŠã„ã¦ã€X(i, j)ã«å€¤ã‚’è¨­å®šã—ãŸã„å ´åˆã€ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ã¯i*n+jã¨ãªã‚‹ã€‚
+	 * @param idx ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹
 	 * @author isao
 	 */
 	public TCMatrix setValue(int idx, double value) {
@@ -378,9 +378,9 @@ public class TCMatrix implements Serializable, Cloneable {
 	 * Notice that C.times(C, B) or C.times(A, C) isn't allowed to use.
 	 * In those case, you have to use times(TCMatrix b) or timesLeft(TCMatrix b) respectively.
 	 * 
-	 * @param src1 s—ñA
-	 * @param src2 s—ñB
-	 * @return this s—ñC
+	 * @param src1 è¡Œåˆ—A
+	 * @param src2 è¡Œåˆ—B
+	 * @return this è¡Œåˆ—C
 	 */
 	public TCMatrix times(TCMatrix src1, TCMatrix src2) {
 		if(fM != src1.fM || src1.fN != src2.fM || fN != src2.fN) {
@@ -500,9 +500,9 @@ public class TCMatrix implements Serializable, Cloneable {
 	}
 
 	/**
-	 * ‘S‚Ä‚Ì—v‘f‚ğd‚ÅŠ„‚Á‚Ä©g‚ğ•Ô‚·D
+	 * å…¨ã¦ã®è¦ç´ ã‚’dã§å‰²ã£ã¦è‡ªèº«ã‚’è¿”ã™ï¼
 	 * @param d 
-	 * @return ‚±‚Ìs—ñ
+	 * @return ã“ã®è¡Œåˆ—
 	 */
 	public TCMatrix div(double d) {
 		for (int m = 0; m < fM; ++m) {
@@ -681,9 +681,9 @@ public class TCMatrix implements Serializable, Cloneable {
 	}
 	
 	/**
-	 * L2ƒmƒ‹ƒ€‚ğ•Ô‚·D
-	 * ‚±‚Ìƒƒ\ƒbƒh‚Í—ñƒxƒNƒgƒ‹‚É‘Î‚µ‚Ä‚Ì‚İ“K—p‰Â”\D
-	 * @return L2ƒmƒ‹ƒ€
+	 * L2ãƒãƒ«ãƒ ã‚’è¿”ã™ï¼
+	 * ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã¯åˆ—ãƒ™ã‚¯ãƒˆãƒ«ã«å¯¾ã—ã¦ã®ã¿é©ç”¨å¯èƒ½ï¼
+	 * @return L2ãƒãƒ«ãƒ 
 	 */
 	public double normL2() {
 		if (getColumnDimension() != 1) {
@@ -697,9 +697,9 @@ public class TCMatrix implements Serializable, Cloneable {
 	}
 	
 	/**
-	 * ’PˆÊƒxƒNƒgƒ‹‚É‹­§‚·‚éD
-	 * ‚±‚Ìƒƒ\ƒbƒh‚Í—ñƒxƒNƒgƒ‹‚É‘Î‚µ‚Ä‚Ì‚İ“K—p‰Â”\D
-	 * @return ’PˆÊƒxƒNƒgƒ‹
+	 * å˜ä½ãƒ™ã‚¯ãƒˆãƒ«ã«å¼·åˆ¶ã™ã‚‹ï¼
+	 * ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã¯åˆ—ãƒ™ã‚¯ãƒˆãƒ«ã«å¯¾ã—ã¦ã®ã¿é©ç”¨å¯èƒ½ï¼
+	 * @return å˜ä½ãƒ™ã‚¯ãƒˆãƒ«
 	 */
 	public TCMatrix enforceToUnitVector() {
 		if (getColumnDimension() != 1) {
@@ -711,10 +711,10 @@ public class TCMatrix implements Serializable, Cloneable {
 	}
 	
 	/**
-	 * “àÏ‚ğ•Ô‚·D
-	 * ‚±‚Ìƒƒ\ƒbƒh‚Í—ñƒxƒNƒgƒ‹‚É‘Î‚µ‚Ä‚Ì‚İ“K—p‰Â”\D
-	 * @param v —ñƒxƒNƒgƒ‹
-	 * @return “àÏ
+	 * å†…ç©ã‚’è¿”ã™ï¼
+	 * ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã¯åˆ—ãƒ™ã‚¯ãƒˆãƒ«ã«å¯¾ã—ã¦ã®ã¿é©ç”¨å¯èƒ½ï¼
+	 * @param v åˆ—ãƒ™ã‚¯ãƒˆãƒ«
+	 * @return å†…ç©
 	 */
 	public double innerProduct(TCMatrix v) {
 		if(getColumnDimension() != 1 || v.getColumnDimension() != 1 || getRowDimension() != v.getRowDimension()) {
@@ -880,7 +880,7 @@ public class TCMatrix implements Serializable, Cloneable {
 	}
 	
 	/**
-	 * “ñ‚Â‚Ìs—ñ‚ÌŠe—v‘f‚ğ”äŠr‚µC‘å‚«‚¢•û‚Ì—v‘f‚Å\¬‚³‚ê‚½s—ñ•Ô‚·D
+	 * äºŒã¤ã®è¡Œåˆ—ã®å„è¦ç´ ã‚’æ¯”è¼ƒã—ï¼Œå¤§ãã„æ–¹ã®è¦ç´ ã§æ§‹æˆã•ã‚ŒãŸè¡Œåˆ—è¿”ã™ï¼
 	 * 
 	 * @param b matrix
 	 * @return this
@@ -902,9 +902,9 @@ public class TCMatrix implements Serializable, Cloneable {
 	}
 	
 	/**
-	 * s—ñ‚ÌŠe—v‘fa_(i,j)‚ğmax(a_(i,j), d)‚Å’u‚«Š·‚¦‚éD
+	 * è¡Œåˆ—ã®å„è¦ç´ a_(i,j)ã‚’max(a_(i,j), d)ã§ç½®ãæ›ãˆã‚‹ï¼
 	 * 
-	 * @param d ”äŠr‘ÎÛ
+	 * @param d æ¯”è¼ƒå¯¾è±¡
 	 * @return this
 	 * @author fnob
 	 */
@@ -920,13 +920,13 @@ public class TCMatrix implements Serializable, Cloneable {
 	}
 	
 	/**
-	 * m-by-ns—ñ‚ÌÅ‘å’l‚Æ‚»‚ê‚É‘Î‰‚·‚éƒCƒ“ƒfƒbƒNƒX‚ğ”­Œ©‚·‚éD
-	 * Å‘å’l‚É‘Î‰‚·‚éƒCƒ“ƒfƒbƒNƒX‚ª•¡”‚ ‚éê‡C‚»‚ê‚ç‚ÌƒCƒ“ƒfƒbƒNƒX‚ğ‘S‚Äæ‚èo‚·D
+	 * m-by-nè¡Œåˆ—ã®æœ€å¤§å€¤ã¨ãã‚Œã«å¯¾å¿œã™ã‚‹ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ã‚’ç™ºè¦‹ã™ã‚‹ï¼
+	 * æœ€å¤§å€¤ã«å¯¾å¿œã™ã‚‹ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ãŒè¤‡æ•°ã‚ã‚‹å ´åˆï¼Œãã‚Œã‚‰ã®ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ã‚’å…¨ã¦å–ã‚Šå‡ºã™ï¼
 	 * 
-	 * @param indexes Å‘å’l‚ÌwƒCƒ“ƒfƒbƒNƒXx‚ğŠi”[‚·‚éƒŠƒXƒg.
-	 * ‚½‚¾‚µCm-by-ns—ñ‚É‚¨‚¯‚é(i,j)—v‘f‚ÌwƒCƒ“ƒfƒbƒNƒXx‚ÍCi*n + j‚Å•\Œ»‚³‚ê‚é‚±‚Æ‚É’ˆÓD
+	 * @param indexes æœ€å¤§å€¤ã®ã€ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ã€ã‚’æ ¼ç´ã™ã‚‹ãƒªã‚¹ãƒˆ.
+	 * ãŸã ã—ï¼Œm-by-nè¡Œåˆ—ã«ãŠã‘ã‚‹(i,j)è¦ç´ ã®ã€ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ã€ã¯ï¼Œi*n + jã§è¡¨ç¾ã•ã‚Œã‚‹ã“ã¨ã«æ³¨æ„ï¼
 	 * 
-	 * @return max Å‘å.
+	 * @return max æœ€å¤§.
 	 * @author fnob
 	 */
 	public double max(ArrayList<Integer> indexes){
@@ -950,13 +950,13 @@ public class TCMatrix implements Serializable, Cloneable {
 	}
 	
 	/**
-	 * m-by-ns—ñ‚Ìs•ûŒü‚ÌÅ‘å’l‚Æ‚»‚ê‚É‘Î‰‚·‚éƒCƒ“ƒfƒbƒNƒX‚ğ”­Œ©‚·‚éD
-	 * Å‘å’l‚É‘Î‰‚·‚éƒCƒ“ƒfƒbƒNƒX‚ª•¡”‚ ‚éê‡C‚»‚ê‚ç‚ÌƒCƒ“ƒfƒbƒNƒX‚ğ‘S‚Äæ‚èo‚·D
+	 * m-by-nè¡Œåˆ—ã®è¡Œæ–¹å‘ã®æœ€å¤§å€¤ã¨ãã‚Œã«å¯¾å¿œã™ã‚‹ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ã‚’ç™ºè¦‹ã™ã‚‹ï¼
+	 * æœ€å¤§å€¤ã«å¯¾å¿œã™ã‚‹ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ãŒè¤‡æ•°ã‚ã‚‹å ´åˆï¼Œãã‚Œã‚‰ã®ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ã‚’å…¨ã¦å–ã‚Šå‡ºã™ï¼
 	 * 
-	 * @param indexes Å‘å’l‚ÌwƒCƒ“ƒfƒbƒNƒXx‚ğŠi”[‚·‚éƒŠƒXƒg.
-	 * ‚½‚¾‚µCm-by-ns—ñ‚É‚¨‚¯‚é(i,j)—v‘f‚ÌwƒCƒ“ƒfƒbƒNƒXx‚ÍCi*n + j‚Å•\Œ»‚³‚ê‚é‚±‚Æ‚É’ˆÓD
+	 * @param indexes æœ€å¤§å€¤ã®ã€ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ã€ã‚’æ ¼ç´ã™ã‚‹ãƒªã‚¹ãƒˆ.
+	 * ãŸã ã—ï¼Œm-by-nè¡Œåˆ—ã«ãŠã‘ã‚‹(i,j)è¦ç´ ã®ã€ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ã€ã¯ï¼Œi*n + jã§è¡¨ç¾ã•ã‚Œã‚‹ã“ã¨ã«æ³¨æ„ï¼
 	 * 
-	 * @param max Å‘å’l‚ğŠi”[‚·‚éƒxƒNƒgƒ‹(m-by-1s—ñ)D
+	 * @param max æœ€å¤§å€¤ã‚’æ ¼ç´ã™ã‚‹ãƒ™ã‚¯ãƒˆãƒ«(m-by-1è¡Œåˆ—)ï¼
 	 * @author fnob
 	 */
 	public void maxRowDirection(ArrayList<Integer> indexes, TCMatrix max){
@@ -990,13 +990,13 @@ public class TCMatrix implements Serializable, Cloneable {
 	}
 	
 	/**
-	 * m-by-ns—ñ‚Ì—ñ•ûŒü‚ÌÅ‘å’l‚Æ‚»‚ê‚É‘Î‰‚·‚éƒCƒ“ƒfƒbƒNƒX‚ğ”­Œ©‚·‚é.
-	 * Å‘å’l‚É‘Î‰‚·‚éƒCƒ“ƒfƒbƒNƒX‚ª•¡”‚ ‚éê‡C‚»‚ê‚ç‚ÌƒCƒ“ƒfƒbƒNƒX‚ğ‘S‚Äæ‚èo‚·.
+	 * m-by-nè¡Œåˆ—ã®åˆ—æ–¹å‘ã®æœ€å¤§å€¤ã¨ãã‚Œã«å¯¾å¿œã™ã‚‹ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ã‚’ç™ºè¦‹ã™ã‚‹.
+	 * æœ€å¤§å€¤ã«å¯¾å¿œã™ã‚‹ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ãŒè¤‡æ•°ã‚ã‚‹å ´åˆï¼Œãã‚Œã‚‰ã®ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ã‚’å…¨ã¦å–ã‚Šå‡ºã™.
 	 * 
-	 * @param indexes Å‘å’l‚ÌwƒCƒ“ƒfƒbƒNƒXx‚ğŠi”[‚·‚éƒŠƒXƒg.
-	 * ‚½‚¾‚µCm-by-ns—ñ‚É‚¨‚¯‚é(i,j)—v‘f‚ÌwƒCƒ“ƒfƒbƒNƒXx‚ÍCi*n + j‚Å•\Œ»‚³‚ê‚é‚±‚Æ‚É’ˆÓ.
+	 * @param indexes æœ€å¤§å€¤ã®ã€ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ã€ã‚’æ ¼ç´ã™ã‚‹ãƒªã‚¹ãƒˆ.
+	 * ãŸã ã—ï¼Œm-by-nè¡Œåˆ—ã«ãŠã‘ã‚‹(i,j)è¦ç´ ã®ã€ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ã€ã¯ï¼Œi*n + jã§è¡¨ç¾ã•ã‚Œã‚‹ã“ã¨ã«æ³¨æ„.
 	 * 
-	 * @param max Å‘å’l‚ğŠi”[‚·‚éƒxƒNƒgƒ‹(1-by-ns—ñ).
+	 * @param max æœ€å¤§å€¤ã‚’æ ¼ç´ã™ã‚‹ãƒ™ã‚¯ãƒˆãƒ«(1-by-nè¡Œåˆ—).
 	 * @author fnob
 	 */
 	public void maxColumnDirection(ArrayList<Integer> indexes, TCMatrix max){
@@ -1031,7 +1031,7 @@ public class TCMatrix implements Serializable, Cloneable {
 	}
 
 	/**
-	 * “ñ‚Â‚Ìs—ñ‚ÌŠe—v‘f‚ğ”äŠr‚µC‘å‚«‚¢•û‚Ì—v‘f‚Å\¬‚³‚ê‚½s—ñ•Ô‚·D
+	 * äºŒã¤ã®è¡Œåˆ—ã®å„è¦ç´ ã‚’æ¯”è¼ƒã—ï¼Œå¤§ãã„æ–¹ã®è¦ç´ ã§æ§‹æˆã•ã‚ŒãŸè¡Œåˆ—è¿”ã™ï¼
 	 * 
 	 * @param b matrix
 	 * @return this
@@ -1053,9 +1053,9 @@ public class TCMatrix implements Serializable, Cloneable {
 	}
 	
 	/**
-	 * s—ñ‚ÌŠe—v‘fa_(i,j)‚ğmin(a_(i,j), d)‚Å’u‚«Š·‚¦‚éD
+	 * è¡Œåˆ—ã®å„è¦ç´ a_(i,j)ã‚’min(a_(i,j), d)ã§ç½®ãæ›ãˆã‚‹ï¼
 	 * 
-	 * @param d ”äŠr‘ÎÛ
+	 * @param d æ¯”è¼ƒå¯¾è±¡
 	 * @return this
 	 * @author fnob
 	 */
@@ -1071,13 +1071,13 @@ public class TCMatrix implements Serializable, Cloneable {
 	}
 	
 	/**
-	 * m-by-ns—ñ‚ÌÅ¬’l‚Æ‚»‚ê‚É‘Î‰‚·‚éƒCƒ“ƒfƒbƒNƒX‚ğ”­Œ©‚·‚éD
-	 * Å¬’l‚É‘Î‰‚·‚éƒCƒ“ƒfƒbƒNƒX‚ª•¡”‚ ‚éê‡C‚»‚ê‚ç‚ÌƒCƒ“ƒfƒbƒNƒX‚ğ‘S‚Äæ‚èo‚·D
+	 * m-by-nè¡Œåˆ—ã®æœ€å°å€¤ã¨ãã‚Œã«å¯¾å¿œã™ã‚‹ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ã‚’ç™ºè¦‹ã™ã‚‹ï¼
+	 * æœ€å°å€¤ã«å¯¾å¿œã™ã‚‹ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ãŒè¤‡æ•°ã‚ã‚‹å ´åˆï¼Œãã‚Œã‚‰ã®ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ã‚’å…¨ã¦å–ã‚Šå‡ºã™ï¼
 	 * 
-	 * @param indexes Å¬’l‚ÌwƒCƒ“ƒfƒbƒNƒXx‚ğŠi”[‚·‚éƒŠƒXƒg.
-	 * ‚½‚¾‚µCm-by-ns—ñ‚É‚¨‚¯‚é(i,j)—v‘f‚ÌwƒCƒ“ƒfƒbƒNƒXx‚ÍCi*n + j‚Å•\Œ»‚³‚ê‚é‚±‚Æ‚É’ˆÓD
+	 * @param indexes æœ€å°å€¤ã®ã€ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ã€ã‚’æ ¼ç´ã™ã‚‹ãƒªã‚¹ãƒˆ.
+	 * ãŸã ã—ï¼Œm-by-nè¡Œåˆ—ã«ãŠã‘ã‚‹(i,j)è¦ç´ ã®ã€ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ã€ã¯ï¼Œi*n + jã§è¡¨ç¾ã•ã‚Œã‚‹ã“ã¨ã«æ³¨æ„ï¼
 	 * 
-	 * @return min Å¬’l.
+	 * @return min æœ€å°å€¤.
 	 * @author fnob
 	 */
 	public double min(ArrayList<Integer> indexes){
@@ -1101,13 +1101,13 @@ public class TCMatrix implements Serializable, Cloneable {
 	}
 	
 	/**
-	 * m-by-ns—ñ‚Ìs•ûŒü‚ÌÅ¬’l‚Æ‚»‚ê‚É‘Î‰‚·‚éƒCƒ“ƒfƒbƒNƒX‚ğ”­Œ©‚·‚éD
-	 * Å¬’l‚É‘Î‰‚·‚éƒCƒ“ƒfƒbƒNƒX‚ª•¡”‚ ‚éê‡C‚»‚ê‚ç‚ÌƒCƒ“ƒfƒbƒNƒX‚ğ‘S‚Äæ‚èo‚·D
+	 * m-by-nè¡Œåˆ—ã®è¡Œæ–¹å‘ã®æœ€å°å€¤ã¨ãã‚Œã«å¯¾å¿œã™ã‚‹ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ã‚’ç™ºè¦‹ã™ã‚‹ï¼
+	 * æœ€å°å€¤ã«å¯¾å¿œã™ã‚‹ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ãŒè¤‡æ•°ã‚ã‚‹å ´åˆï¼Œãã‚Œã‚‰ã®ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ã‚’å…¨ã¦å–ã‚Šå‡ºã™ï¼
 	 * 
-	 * @param indexes Å¬’l‚ÌwƒCƒ“ƒfƒbƒNƒXx‚ğŠi”[‚·‚éƒŠƒXƒg.
-	 * ‚½‚¾‚µCm-by-ns—ñ‚É‚¨‚¯‚é(i,j)—v‘f‚ÌwƒCƒ“ƒfƒbƒNƒXx‚ÍCi*n + j‚Å•\Œ»‚³‚ê‚é‚±‚Æ‚É’ˆÓD
+	 * @param indexes æœ€å°å€¤ã®ã€ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ã€ã‚’æ ¼ç´ã™ã‚‹ãƒªã‚¹ãƒˆ.
+	 * ãŸã ã—ï¼Œm-by-nè¡Œåˆ—ã«ãŠã‘ã‚‹(i,j)è¦ç´ ã®ã€ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ã€ã¯ï¼Œi*n + jã§è¡¨ç¾ã•ã‚Œã‚‹ã“ã¨ã«æ³¨æ„ï¼
 	 * 
-	 * @param min Å¬’l‚ğŠi”[‚·‚éƒxƒNƒgƒ‹(m-by-1s—ñ)D
+	 * @param min æœ€å°å€¤ã‚’æ ¼ç´ã™ã‚‹ãƒ™ã‚¯ãƒˆãƒ«(m-by-1è¡Œåˆ—)ï¼
 	 * @author fnob
 	 */
 	public void minRowDirection(ArrayList<Integer> indexes, TCMatrix min){	
@@ -1141,13 +1141,13 @@ public class TCMatrix implements Serializable, Cloneable {
 	}
 	
 	/**
-	 * m-by-ns—ñ‚Ì—ñ•ûŒü‚ÌÅ¬’l‚Æ‚»‚ê‚É‘Î‰‚·‚éƒCƒ“ƒfƒbƒNƒX‚ğ”­Œ©‚·‚éD
-	 * Å¬’l‚É‘Î‰‚·‚éƒCƒ“ƒfƒbƒNƒX‚ª•¡”‚ ‚éê‡C‚»‚ê‚ç‚ÌƒCƒ“ƒfƒbƒNƒX‚ğ‘S‚Äæ‚èo‚·D
+	 * m-by-nè¡Œåˆ—ã®åˆ—æ–¹å‘ã®æœ€å°å€¤ã¨ãã‚Œã«å¯¾å¿œã™ã‚‹ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ã‚’ç™ºè¦‹ã™ã‚‹ï¼
+	 * æœ€å°å€¤ã«å¯¾å¿œã™ã‚‹ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ãŒè¤‡æ•°ã‚ã‚‹å ´åˆï¼Œãã‚Œã‚‰ã®ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ã‚’å…¨ã¦å–ã‚Šå‡ºã™ï¼
 	 * 
-	 * @param indexes Å¬’l‚ÌwƒCƒ“ƒfƒbƒNƒXx‚ğŠi”[‚·‚éƒŠƒXƒg.
-	 * ‚½‚¾‚µCm-by-ns—ñ‚É‚¨‚¯‚é(i,j)—v‘f‚ÌwƒCƒ“ƒfƒbƒNƒXx‚ÍCi*n + j‚Å•\Œ»‚³‚ê‚é‚±‚Æ‚É’ˆÓD
+	 * @param indexes æœ€å°å€¤ã®ã€ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ã€ã‚’æ ¼ç´ã™ã‚‹ãƒªã‚¹ãƒˆ.
+	 * ãŸã ã—ï¼Œm-by-nè¡Œåˆ—ã«ãŠã‘ã‚‹(i,j)è¦ç´ ã®ã€ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ã€ã¯ï¼Œi*n + jã§è¡¨ç¾ã•ã‚Œã‚‹ã“ã¨ã«æ³¨æ„ï¼
 	 * 
-	 * @param min Å¬’l‚ğŠi”[‚·‚éƒxƒNƒgƒ‹(1-by-ns—ñ)D
+	 * @param min æœ€å°å€¤ã‚’æ ¼ç´ã™ã‚‹ãƒ™ã‚¯ãƒˆãƒ«(1-by-nè¡Œåˆ—)ï¼
 	 * @author fnob
 	 */
 	public void minColumnDirection(ArrayList<Integer> indexes, TCMatrix min){	
@@ -1190,12 +1190,12 @@ public class TCMatrix implements Serializable, Cloneable {
 	}
 	
 	/**
-	 * ©g‚Ì src_i0 ‚©‚ç src_i1 sC‚¨‚æ‚Ñ src_j0 ‚©‚ç src_j1 —ñ‚É‘Î‰‚·‚é•”•ªs—ñ‚ÌƒNƒ[ƒ“‚ğì¬‚µ‚Ä•Ô‚·D
+	 * è‡ªèº«ã® src_i0 ã‹ã‚‰ src_i1 è¡Œï¼ŒãŠã‚ˆã³ src_j0 ã‹ã‚‰ src_j1 åˆ—ã«å¯¾å¿œã™ã‚‹éƒ¨åˆ†è¡Œåˆ—ã®ã‚¯ãƒ­ãƒ¼ãƒ³ã‚’ä½œæˆã—ã¦è¿”ã™ï¼
 	 * @param src_i0 first row index
 	 * @param src_i1 last row index
 	 * @param src_j0 first column index
 	 * @param src_j1 last column index
-	 * @return •”•ªs—ñ‚ÌƒNƒ[ƒ“
+	 * @return éƒ¨åˆ†è¡Œåˆ—ã®ã‚¯ãƒ­ãƒ¼ãƒ³
 	 */
 	public TCMatrix cloneSubmatrix(int src_i0, int src_i1, int src_j0, int src_j1) {
 		TCMatrix result = new TCMatrix();
@@ -1204,9 +1204,9 @@ public class TCMatrix implements Serializable, Cloneable {
 	}
 	
 	/**
-	 * w’è‚µ‚½s‚ÌsƒxƒNƒgƒ‹‚ÌƒNƒ[ƒ“‚ğ•Ô‚·D
-	 * @param rowIndex s
-	 * @return sƒxƒNƒgƒ‹
+	 * æŒ‡å®šã—ãŸè¡Œã®è¡Œãƒ™ã‚¯ãƒˆãƒ«ã®ã‚¯ãƒ­ãƒ¼ãƒ³ã‚’è¿”ã™ï¼
+	 * @param rowIndex è¡Œ
+	 * @return è¡Œãƒ™ã‚¯ãƒˆãƒ«
 	 */
 	public TCMatrix cloneRowVector(int rowIndex) {
 		TCMatrix result = new TCMatrix(1, getColumnDimension());
@@ -1217,9 +1217,9 @@ public class TCMatrix implements Serializable, Cloneable {
 	}
 
 	/**
-	 * w’è‚µ‚½—ñ‚Ì—ñƒxƒNƒgƒ‹‚ÌƒNƒ[ƒ“‚ğ•Ô‚·D
-	 * @param columnIndex —ñ
-	 * @return —ñƒxƒNƒgƒ‹
+	 * æŒ‡å®šã—ãŸåˆ—ã®åˆ—ãƒ™ã‚¯ãƒˆãƒ«ã®ã‚¯ãƒ­ãƒ¼ãƒ³ã‚’è¿”ã™ï¼
+	 * @param columnIndex åˆ—
+	 * @return åˆ—ãƒ™ã‚¯ãƒˆãƒ«
 	 */
 	public TCMatrix cloneColumnVector(int columnIndex) {
 		TCMatrix result = new TCMatrix(getRowDimension(), 1);
@@ -1245,11 +1245,11 @@ public class TCMatrix implements Serializable, Cloneable {
 	}
 	
 	/**
-	 * ÅŒã‚Ìs‚ÌŒã‚És—ñ‚ğ’Ç‰Á‚·‚éD
-	 * “à•”“I‚É‚ÍC–ˆ‰ñCƒƒ‚ƒŠ‚ÌŠm•Û‚Æ—v‘f‚ÌƒRƒs[‚ª‹N‚±‚é‚Ì‚ÅŒø—¦‚Í‚ ‚Ü‚è—Ç‚­‚È‚¢D
-	 * ‚ ‚ç‚©‚¶‚ßÅ‘å‚Ìs”‚ª‚í‚©‚Á‚Ä‚¢‚é‚È‚ç‚ÎCÅ‘å‚Ìs”‚Ås—ñ‚ğ¶¬‚µ‚Ä‚¨‚«CcopyAtRowƒƒ\ƒbƒh‚ÅƒRƒs[‚ğ‚µ‚Ä‚¢‚­•û‚ªŒø—¦“I‚Å‚ ‚éD
-	 * @param b ’Ç‰Á‚µ‚½‚¢s—ñD—ñ”n‚Í“¯‚¶•K—v‚ª‚ ‚éD
-	 * @return (m + b.m)~ns—ñ
+	 * æœ€å¾Œã®è¡Œã®å¾Œã«è¡Œåˆ—ã‚’è¿½åŠ ã™ã‚‹ï¼
+	 * å†…éƒ¨çš„ã«ã¯ï¼Œæ¯å›ï¼Œãƒ¡ãƒ¢ãƒªã®ç¢ºä¿ã¨è¦ç´ ã®ã‚³ãƒ”ãƒ¼ãŒèµ·ã“ã‚‹ã®ã§åŠ¹ç‡ã¯ã‚ã¾ã‚Šè‰¯ããªã„ï¼
+	 * ã‚ã‚‰ã‹ã˜ã‚æœ€å¤§ã®è¡Œæ•°ãŒã‚ã‹ã£ã¦ã„ã‚‹ãªã‚‰ã°ï¼Œæœ€å¤§ã®è¡Œæ•°ã§è¡Œåˆ—ã‚’ç”Ÿæˆã—ã¦ãŠãï¼ŒcopyAtRowãƒ¡ã‚½ãƒƒãƒ‰ã§ã‚³ãƒ”ãƒ¼ã‚’ã—ã¦ã„ãæ–¹ãŒåŠ¹ç‡çš„ã§ã‚ã‚‹ï¼
+	 * @param b è¿½åŠ ã—ãŸã„è¡Œåˆ—ï¼åˆ—æ•°nã¯åŒã˜å¿…è¦ãŒã‚ã‚‹ï¼
+	 * @return (m + b.m)Ã—nè¡Œåˆ—
 	 */
 	public TCMatrix appendAfterLastRow(TCMatrix b) {
 		if (fN != b.fN) {
@@ -1273,11 +1273,11 @@ public class TCMatrix implements Serializable, Cloneable {
 	}
 
 	/**
-	 * ÅŒã‚Ì—ñ‚ÌŒã‚És—ñ‚ğ’Ç‰Á‚·‚éD
-	 * “à•”“I‚É‚ÍC–ˆ‰ñCƒƒ‚ƒŠ‚ÌŠm•Û‚Æ—v‘f‚ÌƒRƒs[‚ª‹N‚±‚é‚Ì‚ÅŒø—¦‚Í‚ ‚Ü‚è—Ç‚­‚È‚¢D
-	 * ‚ ‚ç‚©‚¶‚ßÅ‘å‚Ì—ñ”‚ª‚í‚©‚Á‚Ä‚¢‚é‚È‚ç‚ÎCÅ‘å‚Ì—ñ”‚Ås—ñ‚ğ¶¬‚µ‚Ä‚¨‚«CcopyAtColumnƒƒ\ƒbƒh‚ÅƒRƒs[‚ğ‚µ‚Ä‚¢‚­•û‚ªŒø—¦“I‚Å‚ ‚éD
-	 * @param b ’Ç‰Á‚µ‚½‚¢s—ñDs”m‚Í“¯‚¶‚Å‚ ‚é•K—v‚ª‚ ‚éD
-	 * @return m~(n+b.n)s—ñ
+	 * æœ€å¾Œã®åˆ—ã®å¾Œã«è¡Œåˆ—ã‚’è¿½åŠ ã™ã‚‹ï¼
+	 * å†…éƒ¨çš„ã«ã¯ï¼Œæ¯å›ï¼Œãƒ¡ãƒ¢ãƒªã®ç¢ºä¿ã¨è¦ç´ ã®ã‚³ãƒ”ãƒ¼ãŒèµ·ã“ã‚‹ã®ã§åŠ¹ç‡ã¯ã‚ã¾ã‚Šè‰¯ããªã„ï¼
+	 * ã‚ã‚‰ã‹ã˜ã‚æœ€å¤§ã®åˆ—æ•°ãŒã‚ã‹ã£ã¦ã„ã‚‹ãªã‚‰ã°ï¼Œæœ€å¤§ã®åˆ—æ•°ã§è¡Œåˆ—ã‚’ç”Ÿæˆã—ã¦ãŠãï¼ŒcopyAtColumnãƒ¡ã‚½ãƒƒãƒ‰ã§ã‚³ãƒ”ãƒ¼ã‚’ã—ã¦ã„ãæ–¹ãŒåŠ¹ç‡çš„ã§ã‚ã‚‹ï¼
+	 * @param b è¿½åŠ ã—ãŸã„è¡Œåˆ—ï¼è¡Œæ•°mã¯åŒã˜ã§ã‚ã‚‹å¿…è¦ãŒã‚ã‚‹ï¼
+	 * @return mÃ—(n+b.n)è¡Œåˆ—
 	 */
 	public TCMatrix appendAfterLastColumn(TCMatrix b) {
 		if (fM != b.fM) {
@@ -1299,8 +1299,8 @@ public class TCMatrix implements Serializable, Cloneable {
 	}
 	
 	/**
-	 * s—ñ‚Ì—v‘f‚ÉNaN‚ğŠÜ‚ñ‚Å‚¢‚È‚¢‚©’²‚×‚éD
-	 * @return true:ŠÜ‚ñ‚Å‚¢‚éCfalse:ŠÜ‚ñ‚Å‚¢‚È‚¢
+	 * è¡Œåˆ—ã®è¦ç´ ã«NaNã‚’å«ã‚“ã§ã„ãªã„ã‹èª¿ã¹ã‚‹ï¼
+	 * @return true:å«ã‚“ã§ã„ã‚‹ï¼Œfalse:å«ã‚“ã§ã„ãªã„
 	 */
 	public boolean isNan() {
 		for (int m = 0; m < fM; ++m) {
@@ -1314,10 +1314,10 @@ public class TCMatrix implements Serializable, Cloneable {
 	}
 	
 	/**
-	 * w’è‚³‚ê‚½s‚És—ñ‚ğƒRƒs[‚·‚éD
-	 * @param b ƒRƒs[‚·‚és—ñD—ñ”‚ªƒRƒs[æ‚Ìs—ñi‚±‚Ìs—ñj‚Æ“¯‚¶‚Å‚ ‚é•K—v‚ª‚ ‚éD
-	 * @param row ƒRƒs[‚·‚ésD(row+b‚Ìs”)‚ªƒRƒs[æ‚Ìs—ñi‚±‚Ìs—ñj‚Ìs”“à‚Éû‚Ü‚Á‚Ä‚¢‚é•K—v‚ª‚ ‚éD
-	 * @return ƒRƒs[‚³‚ê‚½Œã‚Ì‚±‚Ìs—ñ
+	 * æŒ‡å®šã•ã‚ŒãŸè¡Œã«è¡Œåˆ—ã‚’ã‚³ãƒ”ãƒ¼ã™ã‚‹ï¼
+	 * @param b ã‚³ãƒ”ãƒ¼ã™ã‚‹è¡Œåˆ—ï¼åˆ—æ•°ãŒã‚³ãƒ”ãƒ¼å…ˆã®è¡Œåˆ—ï¼ˆã“ã®è¡Œåˆ—ï¼‰ã¨åŒã˜ã§ã‚ã‚‹å¿…è¦ãŒã‚ã‚‹ï¼
+	 * @param row ã‚³ãƒ”ãƒ¼ã™ã‚‹è¡Œï¼(row+bã®è¡Œæ•°)ãŒã‚³ãƒ”ãƒ¼å…ˆã®è¡Œåˆ—ï¼ˆã“ã®è¡Œåˆ—ï¼‰ã®è¡Œæ•°å†…ã«åã¾ã£ã¦ã„ã‚‹å¿…è¦ãŒã‚ã‚‹ï¼
+	 * @return ã‚³ãƒ”ãƒ¼ã•ã‚ŒãŸå¾Œã®ã“ã®è¡Œåˆ—
 	 */
 	public TCMatrix copyAtRow(TCMatrix b, int row) {
 		if (fN != b.fN) {
@@ -1335,10 +1335,10 @@ public class TCMatrix implements Serializable, Cloneable {
 	}
 	
 	/**
-	 * w’è‚³‚ê‚½—ñ‚És—ñ‚ğƒRƒs[‚·‚éD
-	 * @param b ƒRƒs[‚·‚és—ñDs”‚ªƒRƒs[æ‚Ìs—ñi‚±‚Ìs—ñj‚Æ“¯‚¶‚Å‚ ‚é•K—v‚ª‚ ‚éD
-	 * @param row ƒRƒs[‚·‚é—ñD(column+b‚Ì—ñ”)‚ªƒRƒs[æ‚Ìs—ñi‚±‚Ìs—ñj‚Ì—ñ”“à‚Éû‚Ü‚Á‚Ä‚¢‚é•K—v‚ª‚ ‚éD
-	 * @return ƒRƒs[‚³‚ê‚½Œã‚Ì‚±‚Ìs—ñ
+	 * æŒ‡å®šã•ã‚ŒãŸåˆ—ã«è¡Œåˆ—ã‚’ã‚³ãƒ”ãƒ¼ã™ã‚‹ï¼
+	 * @param b ã‚³ãƒ”ãƒ¼ã™ã‚‹è¡Œåˆ—ï¼è¡Œæ•°ãŒã‚³ãƒ”ãƒ¼å…ˆã®è¡Œåˆ—ï¼ˆã“ã®è¡Œåˆ—ï¼‰ã¨åŒã˜ã§ã‚ã‚‹å¿…è¦ãŒã‚ã‚‹ï¼
+	 * @param row ã‚³ãƒ”ãƒ¼ã™ã‚‹åˆ—ï¼(column+bã®åˆ—æ•°)ãŒã‚³ãƒ”ãƒ¼å…ˆã®è¡Œåˆ—ï¼ˆã“ã®è¡Œåˆ—ï¼‰ã®åˆ—æ•°å†…ã«åã¾ã£ã¦ã„ã‚‹å¿…è¦ãŒã‚ã‚‹ï¼
+	 * @return ã‚³ãƒ”ãƒ¼ã•ã‚ŒãŸå¾Œã®ã“ã®è¡Œåˆ—
 	 */
 	public TCMatrix copyAtColumn(TCMatrix b, int column) {
 		if (fM != b.fM) {
@@ -1356,9 +1356,9 @@ public class TCMatrix implements Serializable, Cloneable {
 	}
 		
 	/**
-	 * ”ñ‘ÎÌs—ñ‚ğ‘ÎÌs—ñ‚Ö‹­§‚·‚éD
-	 * @param ”ñ‘ÎÌs—ñ
-	 * @return ‘ÎÌs—ñ
+	 * éå¯¾ç§°è¡Œåˆ—ã‚’å¯¾ç§°è¡Œåˆ—ã¸å¼·åˆ¶ã™ã‚‹ï¼
+	 * @param éå¯¾ç§°è¡Œåˆ—
+	 * @return å¯¾ç§°è¡Œåˆ—
 	 */
 	public TCMatrix enforceSymmetry(){
 		if (fM != fN) {
@@ -1374,7 +1374,7 @@ public class TCMatrix implements Serializable, Cloneable {
 	
 	public static void main(String[] args) {				
 		/*
-		//•”•ªs—ñ‚Ìæ‚èo‚µ
+		//éƒ¨åˆ†è¡Œåˆ—ã®å–ã‚Šå‡ºã—
 		TCMatrix mat0 = new TCMatrix(3, 5);
 		mat0.eye();
 		System.out.println(mat0);
@@ -1382,7 +1382,7 @@ public class TCMatrix implements Serializable, Cloneable {
 		vec0.copySubmatrixFrom(mat0, 0, mat0.getRowDimension()-1, 2, 2, 0, 0);
 		System.out.println(vec0);
 		
-		//•”•ª“I‚È•ÏX
+		//éƒ¨åˆ†çš„ãªå¤‰æ›´
 		TCMatrix mat1 = new TCMatrix(3, 3);
 		mat1.fill(0.8);
 		TCMatrix vec1 = new TCMatrix(3, 1);
@@ -1392,13 +1392,13 @@ public class TCMatrix implements Serializable, Cloneable {
 		System.out.println(mat1);
 		*/
 //		
-//		//©g‚ÌŠg‘å
+//		//è‡ªèº«ã®æ‹¡å¤§
 //		TCMatrix mat2 = new TCMatrix(3, 2);
 //		mat2.eye();
 //		mat2.copySubmatrixFrom(mat2, 0, mat2.getRowDimension()-1, 0, mat2.getColumnDimension()-1, 0, mat2.getColumnDimension());
 //		System.out.println(mat2);
 //		
-//		//—v‘f‚Ì’Ç‰Á
+//		//è¦ç´ ã®è¿½åŠ 
 //		TCMatrix dataset = new TCMatrix();
 //		TCMatrix data = new TCMatrix(2, 1);
 //		for(int t=0; t<10; t++) {
@@ -1408,7 +1408,7 @@ public class TCMatrix implements Serializable, Cloneable {
 //			System.out.println(dataset);
 //		}
 //		
-//		//’PˆÊs—ñì¬
+//		//å˜ä½è¡Œåˆ—ä½œæˆ
 //		TCMatrix eye = new TCMatrix();
 //		TCMatrix ele = new TCMatrix(1, 1);
 //		ele.fill(1.0);

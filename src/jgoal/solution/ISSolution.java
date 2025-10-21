@@ -1,7 +1,7 @@
 package jgoal.solution;
 
 /**
- * ’P–Ú“IÅ“K‰»‚Ì‚½‚ß‚ÌŒÂ‘ÌƒCƒ“ƒ^[ƒtƒF[ƒX
+ * å˜ç›®çš„æœ€é©åŒ–ã®ãŸã‚ã®å€‹ä½“ã‚¤ãƒ³ã‚¿ãƒ¼ãƒ•ã‚§ãƒ¼ã‚¹
  *
  * @since 2
  * @author isao
@@ -9,15 +9,15 @@ package jgoal.solution;
 public interface ISSolution extends ICSolution {
 
 	/**
-	 * •]‰¿’l‚ğ•Ô‚·D
-	 * @return •]‰¿’l
+	 * è©•ä¾¡å€¤ã‚’è¿”ã™ï¼
+	 * @return è©•ä¾¡å€¤
 	 * @since 2 isao
 	 */
 	double getEvaluationValue();
 
 	/**
-	 * •]‰¿’l‚ğİ’è‚·‚éD
-	 * @param value •]‰¿’l
+	 * è©•ä¾¡å€¤ã‚’è¨­å®šã™ã‚‹ï¼
+	 * @param value è©•ä¾¡å€¤
 	 * @since 2 isao
 	 */
 	void setEvaluationValue(double value);

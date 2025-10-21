@@ -5,7 +5,7 @@ import java.util.Random;
 import jssf.di.ACParam;
 
 /**
- * Java SDK‚Ìjava.util.RandomƒNƒ‰ƒX‚ğg‚Á‚½—”¶¬ŠíD
+ * Java SDKã®java.util.Randomã‚¯ãƒ©ã‚¹ã‚’ä½¿ã£ãŸä¹±æ•°ç”Ÿæˆå™¨ï¼
  *
  * @since 2
  * @author hmkz
@@ -18,16 +18,16 @@ public class TCJava48BitLcg extends TCAbstractRandom {
 	private Random fRandom;
 
 	/**
-	 * ƒfƒtƒHƒ‹ƒgƒRƒ“ƒXƒgƒ‰ƒNƒ^D
-	 * —”ƒNƒ‰ƒX‚Æ‚µ‚Ä•W€ƒ‰ƒCƒuƒ‰ƒŠ‚ÌRandomC—”ƒV[ƒh‚Æ‚µ‚ÄƒVƒXƒeƒ€‚ğ—p‚¢‚éD
+	 * ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ï¼
+	 * ä¹±æ•°ã‚¯ãƒ©ã‚¹ã¨ã—ã¦æ¨™æº–ãƒ©ã‚¤ãƒ–ãƒ©ãƒªã®Randomï¼Œä¹±æ•°ã‚·ãƒ¼ãƒ‰ã¨ã—ã¦ã‚·ã‚¹ãƒ†ãƒ æ™‚åˆ»ã‚’ç”¨ã„ã‚‹ï¼
 	 */
 	public TCJava48BitLcg() {
 		fRandom = new Random();
 	}
 
 	/**
-	 * ƒRƒ“ƒXƒgƒ‰ƒNƒ^
-	 * @param seed —”ƒV[ƒh
+	 * ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
+	 * @param seed ä¹±æ•°ã‚·ãƒ¼ãƒ‰
 	 */
 	public TCJava48BitLcg(
 			@ACParam(key = "Seed") long seed

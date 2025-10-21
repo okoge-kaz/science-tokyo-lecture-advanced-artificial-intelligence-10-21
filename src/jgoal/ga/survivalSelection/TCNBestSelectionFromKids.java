@@ -8,7 +8,7 @@ import jgoal.solution.comparator.ICComparator;
 import jssf.di.ACParam;
 
 /**
- * qŒÂ‘ÌãˆÊNŒÂ‘Ì‚ğW’c‚É–ß‚·¶‘¶‘I‘ğŠíD
+ * å­å€‹ä½“ä¸Šä½Nå€‹ä½“ã‚’é›†å›£ã«æˆ»ã™ç”Ÿå­˜é¸æŠå™¨ï¼
  * 
  * @author uemura
  *
@@ -21,10 +21,10 @@ public class TCNBestSelectionFromKids<
 	/**  */
 	private static final long serialVersionUID = 1L;
 	
-	/** ŒÂ‘Ì”äŠrŠí */
+	/** å€‹ä½“æ¯”è¼ƒå™¨ */
 	private ICComparator<X> fComparator;
 	
-	/** ¶‘¶‘I‘ğ‚É‚æ‚è‘I‘ğ‚³‚ê‚½ŒÂ‘ÌŒQ */
+	/** ç”Ÿå­˜é¸æŠã«ã‚ˆã‚Šé¸æŠã•ã‚ŒãŸå€‹ä½“ç¾¤ */
 	private TCSolutionSet<X> fSelectedSolutions;
 
 	public TCNBestSelectionFromKids(

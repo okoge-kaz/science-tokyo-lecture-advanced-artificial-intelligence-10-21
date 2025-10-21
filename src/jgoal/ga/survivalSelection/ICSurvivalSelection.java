@@ -6,7 +6,7 @@ import jgoal.solution.ICSolution;
 import jgoal.solution.TCSolutionSet;
 
 /**
- * ¶‘¶‘I‘ğŠíD
+ * ç”Ÿå­˜é¸æŠå™¨ï¼
  * @author uemura
  *
  * @param <X>
@@ -16,16 +16,16 @@ public interface ICSurvivalSelection<
 > extends Serializable {
 
 	/**
-	 * ¶‘¶‘I‘ğ‚ğs‚¤D
-	 * @param population W’c
-	 * @param parents eŒÂ‘ÌW‡
-	 * @param kids ¶¬qŒÂ‘ÌW‡
+	 * ç”Ÿå­˜é¸æŠã‚’è¡Œã†ï¼
+	 * @param population é›†å›£
+	 * @param parents è¦ªå€‹ä½“é›†åˆ
+	 * @param kids ç”Ÿæˆå­å€‹ä½“é›†åˆ
 	 */
 	void doIt(TCSolutionSet<X> population, TCSolutionSet<X> parents, TCSolutionSet<X> kids);
 	
 	/**
-	 * ¶‘¶‘I‘ğ‚É‚æ‚è‘I‚Î‚ê‚½ŒÂ‘ÌŒQ‚ğ•Ô‚·D
-	 * @return ¶‘¶‘I‘ğ‚É‚æ‚è‘I‚Î‚ê‚½ŒÂ‘ÌŒQ
+	 * ç”Ÿå­˜é¸æŠã«ã‚ˆã‚Šé¸ã°ã‚ŒãŸå€‹ä½“ç¾¤ã‚’è¿”ã™ï¼
+	 * @return ç”Ÿå­˜é¸æŠã«ã‚ˆã‚Šé¸ã°ã‚ŒãŸå€‹ä½“ç¾¤
 	 */
 	TCSolutionSet<X> getSelectedSolutions();
 

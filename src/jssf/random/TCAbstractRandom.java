@@ -6,10 +6,10 @@ import java.util.RandomAccess;
 
 /**
  * This abstract class provides the default implementation of random number generator's methods.
- * ‚±‚Ì’ŠÛƒNƒ‰ƒX‚ğŒp³‚µ‚½ƒNƒ‰ƒX‚ÍCˆÈ‰º‚Ì‚Q‚Â‚Ìƒƒ\ƒbƒh‚Ì‚İ‚ğÀ‘•‚·‚ê‚ÎC‘S‚Ä‚Ì—”ƒƒ\ƒbƒh‚ª—˜—p‰Â”\‚É‚È‚éD
+ * ã“ã®æŠ½è±¡ã‚¯ãƒ©ã‚¹ã‚’ç¶™æ‰¿ã—ãŸã‚¯ãƒ©ã‚¹ã¯ï¼Œä»¥ä¸‹ã®ï¼’ã¤ã®ãƒ¡ã‚½ãƒƒãƒ‰ã®ã¿ã‚’å®Ÿè£…ã™ã‚Œã°ï¼Œå…¨ã¦ã®ä¹±æ•°ãƒ¡ã‚½ãƒƒãƒ‰ãŒåˆ©ç”¨å¯èƒ½ã«ãªã‚‹ï¼
  * <ul>
- *  <li>—”Œn—ñ‚Ìí‚ğİ’è‚·‚éresetSeed(long seed)
- *  <li>bitsƒrƒbƒg‚Ìˆê—l—”‚ğ¶¬‚·‚énext(int bits)
+ *  <li>ä¹±æ•°ç³»åˆ—ã®ç¨®ã‚’è¨­å®šã™ã‚‹resetSeed(long seed)
+ *  <li>bitsãƒ“ãƒƒãƒˆã®ä¸€æ§˜ä¹±æ•°ã‚’ç”Ÿæˆã™ã‚‹next(int bits)
  * </ul>
  *
  * @since 2

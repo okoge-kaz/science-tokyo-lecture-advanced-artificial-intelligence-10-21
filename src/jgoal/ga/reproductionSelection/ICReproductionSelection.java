@@ -6,8 +6,8 @@ import jgoal.solution.ICSolution;
 import jgoal.solution.TCSolutionSet;
 
 /**
- * GA‚Ì•¡»‘I‘ğŠíD
- * •œŒ³’ŠoC‚¨‚æ‚Ñ”ñ•œŒ³’Šo‚Ì—¼•û‚Å—p‚¢‚éD
+ * GAã®è¤‡è£½é¸æŠå™¨ï¼
+ * å¾©å…ƒæŠ½å‡ºï¼ŒãŠã‚ˆã³éå¾©å…ƒæŠ½å‡ºã®ä¸¡æ–¹ã§ç”¨ã„ã‚‹ï¼
  * 
  * @author uemura
  *
@@ -18,15 +18,15 @@ public interface ICReproductionSelection<
 > extends Serializable {
 
 	/**
-	 * eŒÂ‘Ì‚Ì‘I‘ğ‚ğs‚¤D
-	 * •œŒ³’Šo‚Ìê‡‚ÍCpopulation“à‚ÌŒÂ‘Ì‚ÌƒRƒs[‚ğparents‚É“o˜^‚·‚éD
-	 * ”ñ•œŒ³’Šo‚Ìê‡‚ÍCpopulation‚©‚çíœ‚µ‚½ŒÂ‘Ì‚ğparents‚É“o˜^‚·‚éD
-	 * {@code parents} ‚É’Šo‚³‚ê‚½eW’c‚ªŠi”[‚³‚ê‚éD
-	 * {@code parents} ‚Ín‚ß‚É{@code clear()} ‚³‚ê‚é‚±‚ÆD
+	 * è¦ªå€‹ä½“ã®é¸æŠã‚’è¡Œã†ï¼
+	 * å¾©å…ƒæŠ½å‡ºã®å ´åˆã¯ï¼Œpopulationå†…ã®å€‹ä½“ã®ã‚³ãƒ”ãƒ¼ã‚’parentsã«ç™»éŒ²ã™ã‚‹ï¼
+	 * éå¾©å…ƒæŠ½å‡ºã®å ´åˆã¯ï¼Œpopulationã‹ã‚‰å‰Šé™¤ã—ãŸå€‹ä½“ã‚’parentsã«ç™»éŒ²ã™ã‚‹ï¼
+	 * {@code parents} ã«æŠ½å‡ºã•ã‚ŒãŸè¦ªé›†å›£ãŒæ ¼ç´ã•ã‚Œã‚‹ï¼
+	 * {@code parents} ã¯å§‹ã‚ã«{@code clear()} ã•ã‚Œã‚‹ã“ã¨ï¼
 	 * 
-	 * @param population W’c
-	 * @param noOfParents •K—veŒÂ‘Ì”
-	 * @param parents eŒÂ‘Ì‚ÌW‡‚ªŠi”[‚³‚ê‚éŒÂ‘ÌW‡D•K—v‚ÈƒTƒCƒY‚É—\‚ßƒŠƒTƒCƒY‚µ‚Ä‚¨‚­‚±‚ÆD
+	 * @param population é›†å›£
+	 * @param noOfParents å¿…è¦è¦ªå€‹ä½“æ•°
+	 * @param parents è¦ªå€‹ä½“ã®é›†åˆãŒæ ¼ç´ã•ã‚Œã‚‹å€‹ä½“é›†åˆï¼å¿…è¦ãªã‚µã‚¤ã‚ºã«äºˆã‚ãƒªã‚µã‚¤ã‚ºã—ã¦ãŠãã“ã¨ï¼
 	 */
 	public void doIt(TCSolutionSet<X> population, int noOfParents, TCSolutionSet<X> parents);
 

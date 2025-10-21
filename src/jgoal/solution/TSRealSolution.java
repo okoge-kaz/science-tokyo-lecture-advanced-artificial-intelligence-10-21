@@ -48,8 +48,8 @@ public class TSRealSolution implements ISRealSolution {
 	}
 
 	/**
-	 * ƒRƒs[ƒRƒ“ƒXƒgƒ‰ƒNƒ^
-	 * @param src ƒRƒs[Œ³
+	 * ã‚³ãƒ”ãƒ¼ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
+	 * @param src ã‚³ãƒ”ãƒ¼å…ƒ
 	 */
 	public TSRealSolution(TSRealSolution src) {
 		fStatus = src.fStatus;
@@ -58,7 +58,7 @@ public class TSRealSolution implements ISRealSolution {
 	}
 	
 	/**
-	 * ƒNƒ[ƒ“‘€ì
+	 * ã‚¯ãƒ­ãƒ¼ãƒ³æ“ä½œ
 	 */
 	@Override
 	public TSRealSolution clone() {

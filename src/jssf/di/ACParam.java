@@ -5,10 +5,10 @@ import java.lang.annotation.RetentionPolicy;
 
 
 /**
- * ƒRƒ“ƒXƒgƒ‰ƒNƒ^‚Ìˆø”‚ğİ’èƒtƒ@ƒCƒ‹‚ÌƒL[‚ÆŠÖ˜A•t‚¯‚éD
- * ‚±‚ÌƒAƒmƒe[ƒVƒ‡ƒ“‚ÍƒRƒ“ƒXƒgƒ‰ƒNƒ^‚Ìˆø”‚É•t‰Á‚³‚ê‚éD
- * ‚·‚×‚Ä‚Ìˆø”‚É‚±‚ÌƒAƒmƒe[ƒVƒ‡ƒ“‚ª•t‰Á‚³‚ê‚½ƒRƒ“ƒXƒgƒ‰ƒNƒ^‚ğ‚à‚ÂƒNƒ‰ƒX‚ÍC
- * {@link TCObjectFactory#create(String)}‚È‚Ç‚ğ—p‚¢‚ÄƒCƒ“ƒXƒ^ƒ“ƒX‚Ì¶¬‚ª‰Â”\‚Æ‚È‚éD
+ * ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã®å¼•æ•°ã‚’è¨­å®šãƒ•ã‚¡ã‚¤ãƒ«ã®ã‚­ãƒ¼ã¨é–¢é€£ä»˜ã‘ã‚‹ï¼
+ * ã“ã®ã‚¢ãƒãƒ†ãƒ¼ã‚·ãƒ§ãƒ³ã¯ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã®å¼•æ•°ã«ä»˜åŠ ã•ã‚Œã‚‹ï¼
+ * ã™ã¹ã¦ã®å¼•æ•°ã«ã“ã®ã‚¢ãƒãƒ†ãƒ¼ã‚·ãƒ§ãƒ³ãŒä»˜åŠ ã•ã‚ŒãŸã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã‚’ã‚‚ã¤ã‚¯ãƒ©ã‚¹ã¯ï¼Œ
+ * {@link TCObjectFactory#create(String)}ãªã©ã‚’ç”¨ã„ã¦ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã®ç”ŸæˆãŒå¯èƒ½ã¨ãªã‚‹ï¼
  *
  * @since 2
  * @author hmkz
@@ -16,15 +16,15 @@ import java.lang.annotation.RetentionPolicy;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface ACParam {
 	/**
-	 * •Ï”–¼‚ğ•Ô‚·
-	 * @return •Ï”–¼
+	 * å¤‰æ•°åã‚’è¿”ã™
+	 * @return å¤‰æ•°å
 	 * @since 2 hmkz
 	 */
 	String key();
 
 	/**
-	 * ƒfƒtƒHƒ‹ƒg’l‚ğ•Ô‚·
-	 * @return ƒfƒtƒHƒ‹ƒg’l
+	 * ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆå€¤ã‚’è¿”ã™
+	 * @return ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆå€¤
 	 * @since 2 hmkz
 	 */
 	String defaultValue() default "";

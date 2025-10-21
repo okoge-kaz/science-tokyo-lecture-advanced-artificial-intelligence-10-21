@@ -62,12 +62,12 @@ public class TSUndxMgg implements Serializable {
 	
 	/**
 	 * Constructor
-	 * @param solution ‰ğ‚Ìƒeƒ“ƒvƒŒ[ƒg
-	 * @param noOfParents eŒÂ‘Ì”
-	 * @param noOfKids ¶¬qŒÂ‘Ì”
-	 * @param reproductionSelection •¡»‘I‘ğŠí
-	 * @param reproduction qŒÂ‘Ì¶¬ŠíiŒğ³j
-	 * @param survivalSelection ¶‘¶‘I‘ğŠí
+	 * @param solution è§£ã®ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆ
+	 * @param noOfParents è¦ªå€‹ä½“æ•°
+	 * @param noOfKids ç”Ÿæˆå­å€‹ä½“æ•°
+	 * @param reproductionSelection è¤‡è£½é¸æŠå™¨
+	 * @param reproduction å­å€‹ä½“ç”Ÿæˆå™¨ï¼ˆäº¤å‰ï¼‰
+	 * @param survivalSelection ç”Ÿå­˜é¸æŠå™¨
 	 */
 	public TSUndxMgg(
 			@ACParam(key="Minimization") boolean minimization,
@@ -85,8 +85,8 @@ public class TSUndxMgg implements Serializable {
 	}
 
 	/**
-	 * ‰Šú‰»‚·‚éD
-	 * @return ‰ŠúW’c
+	 * åˆæœŸåŒ–ã™ã‚‹ï¼
+	 * @return åˆæœŸé›†å›£
 	 */
 	public TCSolutionSet<TSRealSolution> initialize() {
 		fParents = new TCSolutionSet<TSRealSolution>(fSolutionTemplate);
@@ -100,35 +100,35 @@ public class TSUndxMgg implements Serializable {
 	}
 	
 	/**
-	 * W’c‚ğ•Ô‚·D
-	 * @return W’c
+	 * é›†å›£ã‚’è¿”ã™ï¼
+	 * @return é›†å›£
 	 */
 	public TCSolutionSet<TSRealSolution> getPopulation() {
 		return fPopulation;
 	}
 	
 	/**
-	 * qŒÂ‘ÌW‡‚ğ¶¬‚µ‚Ä•Ô‚·D
-	 * @return qŒÂ‘ÌW‡
+	 * å­å€‹ä½“é›†åˆã‚’ç”Ÿæˆã—ã¦è¿”ã™ï¼
+	 * @return å­å€‹ä½“é›†åˆ
 	 */
 	public TCSolutionSet<TSRealSolution> makeOffspring() {
-		fParents.clear(); //eŒÂ‘ÌW‡‚ğƒNƒŠƒA‚·‚éD
-		fKids.clear(); //qŒÂ‘ÌW‡‚ğƒNƒŠƒA‚·‚éD
-		fReproductionSelection.doIt(fPopulation, fUndx.getNoOfParents(), fParents); //¶‘¶‘I‘ğ‚ğs‚¤D
-		fUndx.makeOffspring(fParents, fNoOfKids, fKids); //AREX‚É‚æ‚èqŒÂ‘ÌW‡‚ğ¶¬‚·‚éD
+		fParents.clear(); //è¦ªå€‹ä½“é›†åˆã‚’ã‚¯ãƒªã‚¢ã™ã‚‹ï¼
+		fKids.clear(); //å­å€‹ä½“é›†åˆã‚’ã‚¯ãƒªã‚¢ã™ã‚‹ï¼
+		fReproductionSelection.doIt(fPopulation, fUndx.getNoOfParents(), fParents); //ç”Ÿå­˜é¸æŠã‚’è¡Œã†ï¼
+		fUndx.makeOffspring(fParents, fNoOfKids, fKids); //AREXã«ã‚ˆã‚Šå­å€‹ä½“é›†åˆã‚’ç”Ÿæˆã™ã‚‹ï¼
 		return fKids;
 	}
 	
 	/**
-	 * ¢‘ã‚ği‚ß‚éD
+	 * ä¸–ä»£ã‚’é€²ã‚ã‚‹ï¼
 	 */
 	public void nextGeneration() {
-		fSurvivalSelection.doIt(fPopulation, fParents, fKids); //¶‘¶‘I‘ğ‚ğs‚¤D
+		fSurvivalSelection.doIt(fPopulation, fParents, fKids); //ç”Ÿå­˜é¸æŠã‚’è¡Œã†ï¼
 	}
 	
 	/**
-	 * W’c’†‚ÌÅ—ÇŒÂ‘Ì‚ğ•Ô‚·D
-	 * @return W’c’†‚ÌÅ—ÇŒÂ‘Ì
+	 * é›†å›£ä¸­ã®æœ€è‰¯å€‹ä½“ã‚’è¿”ã™ï¼
+	 * @return é›†å›£ä¸­ã®æœ€è‰¯å€‹ä½“
 	 */
 	public TSRealSolution getBestIndividual() {
 		Collections.sort(fPopulation, fComparator);
@@ -136,8 +136,8 @@ public class TSUndxMgg implements Serializable {
 	}
 	
 	/**
-	 * W’c’†‚ÌÅ—ÇŒÂ‘Ì‚Ì•]‰¿’l‚ğ•Ô‚·D
-	 * @return W’c’†‚ÌÅ—ÇŒÂ‘Ì‚Ì•]‰¿’l
+	 * é›†å›£ä¸­ã®æœ€è‰¯å€‹ä½“ã®è©•ä¾¡å€¤ã‚’è¿”ã™ï¼
+	 * @return é›†å›£ä¸­ã®æœ€è‰¯å€‹ä½“ã®è©•ä¾¡å€¤
 	 */
 	public double getBestEvaluationValue() {
 		return getBestIndividual().getEvaluationValue();

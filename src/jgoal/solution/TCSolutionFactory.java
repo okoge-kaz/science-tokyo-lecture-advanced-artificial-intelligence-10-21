@@ -3,8 +3,8 @@ package jgoal.solution;
 import java.io.Serializable;
 
 /**
- * ‰ğƒeƒ“ƒvƒŒ[ƒg‚ğ—˜—p‚·‚éƒtƒ@ƒNƒgƒŠD
- * cloneƒƒ\ƒbƒh‚ğ¶‚Å—˜—p‚µ‚½Û‚É¶‚¶‚éŒ^•ÏŠ·‚ğ‰B•Á‚·‚é‚½‚ß‚Ìƒ†[ƒeƒBƒŠƒeƒBD
+ * è§£ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆã‚’åˆ©ç”¨ã™ã‚‹ãƒ•ã‚¡ã‚¯ãƒˆãƒªï¼
+ * cloneãƒ¡ã‚½ãƒƒãƒ‰ã‚’ç”Ÿã§åˆ©ç”¨ã—ãŸéš›ã«ç”Ÿã˜ã‚‹å‹å¤‰æ›ã‚’éš è”½ã™ã‚‹ãŸã‚ã®ãƒ¦ãƒ¼ãƒ†ã‚£ãƒªãƒ†ã‚£ï¼
  * @author isao
  *
  * @param <X>
@@ -13,19 +13,19 @@ public class TCSolutionFactory<X extends ICSolution> implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 
-	/** ‰ğƒeƒ“ƒvƒŒ[ƒg */
+	/** è§£ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆ */
 	private X fSolutionTemplate;
 	
 	/**
-	 * ƒRƒ“ƒXƒgƒ‰ƒNƒ^
-	 * @param solutionTemplate ‰ğƒeƒ“ƒvƒŒ[ƒg
+	 * ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
+	 * @param solutionTemplate è§£ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆ
 	 */
 	public TCSolutionFactory(X solutionTemplate) {
 		fSolutionTemplate = solutionTemplate;
 	}
 	
 	/**
-	 * ‰ğ‚ğ¶¬‚·‚éD
+	 * è§£ã‚’ç”Ÿæˆã™ã‚‹ï¼
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
@@ -34,9 +34,9 @@ public class TCSolutionFactory<X extends ICSolution> implements Serializable {
 	}
 	
 	/**
-	 * ˆø”‚Ì‰ğ‚ÌƒRƒs[‚ğ¶¬‚·‚éD
-	 * @param src ƒRƒs[Œ³
-	 * @return ƒRƒs[
+	 * å¼•æ•°ã®è§£ã®ã‚³ãƒ”ãƒ¼ã‚’ç”Ÿæˆã™ã‚‹ï¼
+	 * @param src ã‚³ãƒ”ãƒ¼å…ƒ
+	 * @return ã‚³ãƒ”ãƒ¼
 	 */
 	@SuppressWarnings("unchecked")
 	public X createClone(X src) {
